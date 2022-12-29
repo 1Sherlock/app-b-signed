@@ -4,7 +4,6 @@ body {
 }
 
 %title {
-  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 70px;
@@ -22,7 +21,6 @@ body {
   width: 365px;
   height: 98px;
   display: block;
-  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -41,7 +39,7 @@ body {
 
     h1 {
       @extend %title;
-      width: 425px;
+      width: 446px;
 
     }
   }
@@ -60,7 +58,6 @@ body {
     }
 
     .title {
-      font-family: 'Montserrat', sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 50px;
@@ -73,9 +70,6 @@ body {
     }
 
     .text {
-      font-family: 'Poppins', sans-serif;
-      font-style: normal;
-      font-weight: 400;
       font-size: 20px;
       line-height: 30px;
       color: #FFFFFF;
@@ -197,7 +191,6 @@ body {
         background: rgba(206, 206, 206, 0.53);
         backdrop-filter: blur(11.5px);
         border-radius: 58px;
-        font-family: 'Montserrat', sans-serif;
         font-style: normal;
         font-weight: 800;
         font-size: 32px;
@@ -256,116 +249,307 @@ body {
       margin: 80px auto 0 auto;
     }
   }
+}
 
-  .form-section {
-    width: 1400px;
-    margin: 147px auto 0 auto;
+.form-section {
+  width: 1400px;
+  margin: 147px auto 0 auto;
 
-    .form-component {
+  .form-component {
+    display: flex;
+
+    h1 {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 132.9%;
+      color: #FFFFFF;
+    }
+
+    .form {
+      width: 982px;
+      height: 830.05px;
+      margin-top: 48px;
+      margin-left: 60px;
+
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #FFFFFF;
+        margin-bottom: 0;
+        width: 700px;
+      }
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(25px);
+      border-radius: 26px;
+      width: 982px;
+      height: 830.05px;
+      padding: 70px 0 0 0;
+      box-sizing: border-box;
+
+    }
+
+    .form-group {
+      padding: 0 55px 0 72px;
+    }
+
+    label {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 37px;
+      color: #FFFFFF;
+      margin-bottom: 23px;
+      display: block;
+
+
+    }
+
+    input {
+      background: #FFFFFF;
+      box-shadow: 0 0 61px rgba(0, 0, 0, 0.34);
+      border-radius: 5px;
+      width: 100%;
+      height: 60px;
+      padding: 20px;
+      box-sizing: border-box;
+      margin-bottom: 41px;
+    }
+
+    input[id='email'] {
+      width: 434px;
+    }
+
+    input[id='phone'] {
+      width: 383px;
+    }
+
+    textarea {
+      min-height: 180px;
+      width: 100%;
+    }
+
+    .email-and-number {
       display: flex;
+      justify-content: space-between;
+      padding: 0 55px 0 72px;
+    }
 
-      h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 48px;
-        line-height: 132.9%;
-        color: #FFFFFF;
+    button {
+      background: rgba(255, 255, 255, 0.63);
+      border-radius: 0 0 26px 26px;
+      height: 109.92px;
+      width: 100%;
+      margin-top: 78px;
+      border: none;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 52px;
+      color: #020202;
+      cursor: pointer;
+    }
+  }
+}
+
+footer {
+  width: 1440px;
+  margin: 194px auto 200px auto;
+
+  .footer-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 40px;
+    color: #FFFFFF;
+    width: 300px;
+  }
+
+  .menu{
+    display: flex;
+    b{
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 97px;
+      color: #FFFFFF;
+    }
+    ul{
+      list-style: none;
+      padding-left: 0;
+    }
+    li{
+      margin-bottom: 16px;
+    }
+    a{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 48px;
+      color: #FFFFFF;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      img{
+        margin-right: 40px;
       }
-
-      .form {
-        width: 982px;
-        height: 830.05px;
-        margin-top: 48px;
-        margin-left: 60px;
-
-        p {
-          font-family: 'Poppins', sans-serif;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 24px;
-          line-height: 36px;
-          color: #FFFFFF;
-          margin-bottom: 0;
-          width: 700px;
-        }
-      }
-
-      form {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(25px);
-        border-radius: 26px;
-        width: 982px;
-        height: 830.05px;
-        padding: 70px 0 0 0;
-        box-sizing: border-box;
-
-      }
-
-      .form-group{
-        padding: 0 55px 0 72px;
-      }
-
-      label {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 37px;
-        color: #FFFFFF;
-        margin-bottom: 23px;
+    }
+    .nav:last-child{
+      margin-left: 155px;
+      b {
         display: block;
-
-
+        margin-bottom: 6px;
       }
-
-      input {
-        background: #FFFFFF;
-        box-shadow: 0 0 61px rgba(0, 0, 0, 0.34);
-        border-radius: 5px;
-        width: 100%;
-        height: 60px;
-        padding: 20px;
-        box-sizing: border-box;
-        margin-bottom: 41px;
+      li{
+        margin-bottom: 25px;
       }
-
-      input[id='email'] {
-        width: 434px;
-      }
-
-      input[id='phone'] {
-        width: 383px;
-      }
-
-      textarea {
-        min-height: 180px;
-        width: 100%;
-      }
-
-      .email-and-number {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 55px 0 72px;
-      }
-
-      button {
-        background: rgba(255, 255, 255, 0.63);
-        border-radius: 0 0 26px 26px;
-        height: 109.92px;
-        width: 100%;
-        margin-top: 78px;
-        border: none;
-        font-family: 'Montserrat',sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 52px;
-        color: #020202;
-        cursor: pointer;
+      a{
+        font-size: 24px;
+        line-height: 172.7%;
       }
     }
   }
 }
 
+.web-page{
+  .section-one{
+    height: 1150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+      width: 420px;
+
+     @extend %title;
+    }
+  }
+
+  .section-two{
+    width: 1400px;
+    margin: 0 auto;
+    .parent-box{
+      display: flex;
+      justify-content: space-between;
+    }
+    .box{
+      width: 390px;
+     margin-bottom: 50px;
+    }
+    .title{
+      font-family: 'Montserrat',sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 50px;
+      line-height: 97px;
+      color: #FFFFFF;
+    }
+    .text{
+      font-family: 'Poppins',sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: #FFFFFF;
+    }
+  }
+
+  .section-three{
+    height: 1250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+      @extend %title;
+      width: 600px;
+
+    }
+  }
+
+  .carousel-section{
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .count{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 50px;
+      h1{
+        font-family: 'Neue Machina',sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 64px;
+        line-height: 20px;
+        color: #70A363;
+      }
+      h4{
+        font-family: 'Neue Machina',sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 20px;
+        color: #F86161;
+      }
+    }
+    .text{
+      font-family: 'Poppins',sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 62px;
+      color: #FFFFFF;
+      width: 570px;
+    }
+  }
+
+  .section-four{
+    width: 1420px;
+    margin: 313px auto 0 auto;
+    .parent-box{
+      display: flex;
+      justify-content: space-between;
+      .box{
+        width: 680px;
+        img{
+          width: 100%;
+          display: block;
+        }
+        img:nth-child(2){
+          margin-top: 70px;
+        }
+        .title{
+          font-family: 'Neue Machina',sans-serif;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 64px;
+          line-height: 132.9%;
+          text-transform: uppercase;
+          color: #FFFFFF;
+        }
+        .text{
+          font-family: 'Poppins',sans-serif;
+          margin-top: 24px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 30px;
+          color: #FFFFFF;
+          width: 300px;
+          margin-bottom: 265px;
+        }
+      }
+    }
+  }
+}
 
