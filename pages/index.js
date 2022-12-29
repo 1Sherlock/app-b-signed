@@ -1,16 +1,30 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 
 import React from 'react';
+import Link from "next/link";
 
 const Home = () => {
   return (
       <div className={styles.main}>
-        Home
-          <video muted autoPlay loop width={646}>
-              <source src="/assets/video/shart.mp4" />
-          </video>
+
+         <div className={styles.mainContent}>
+             <Link href="/"><img src="/assets/icons/logo.svg" alt="logo"/></Link>
+             <div className={styles.videoWrap}>
+                 <video muted autoPlay loop>
+                     <source src="/assets/video/shart.mp4" />
+                 </video>
+                 <div className={styles.rotateTextWrap}>
+                     <img src="/assets/images/rotate.svg" alt="rotate" className={styles.rotateText}/>
+                     <div className={styles.rotateCircle}/>
+                     <div className={styles.rotateCircleMini}/>
+
+                 </div>
+             </div>
+             <p>Our website is currently under development</p>
+
+         </div>
       </div>
   );
 };
