@@ -12,19 +12,20 @@ const Home = () => {
          <div className={styles.mainContent}>
              <Link href="/"><img src="/assets/icons/logo.svg" alt="logo"/></Link>
              <div className={styles.videoWrap}>
-                 <video muted autoPlay loop>
+                 <video muted autoPlay loop playsInline>
                      <source src="/assets/video/shart.mp4" />
                  </video>
                  <div className={styles.rotateTextWrap}>
                      <img src="/assets/images/rotate.svg" alt="rotate" className={styles.rotateText}/>
                      <div className={styles.rotateCircle}/>
                      <div className={styles.rotateCircleMini}/>
-
                  </div>
              </div>
              <p>Our website is currently under development</p>
-
          </div>
+          <div className={styles.rightContent}>
+
+          </div>
       </div>
   );
 };
