@@ -3,7 +3,21 @@
   src: url("/assets/fonts/poppins/Poppins-Regular.ttf") format("truetype");
   font-display: swap;
 }
+@font-face {
+  font-family: "Montserrat-ExstraBold";
+  src: url("/assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("/assets/fonts/Montserrat/static/Montserrat-Bold.ttf") format("truetype");
+}
 
 .font-poppins-regular{
   font-family: "Poppins-Regular", sans-serif;
+}
+.font-montserrat-extra-bold{
+  font-family: "Montserrat-EkstraBold", sans-serif;
+}
+.font-montserrat-bold{
+  font-family: "Montserrat-Bold", sans-serif;
 }
