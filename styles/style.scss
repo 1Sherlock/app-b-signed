@@ -429,7 +429,7 @@ footer {
     align-items: center;
     justify-content: center;
     h1{
-      width: 420px;
+      width: 450px;
 
      @extend %title;
     }
@@ -447,7 +447,6 @@ footer {
      margin-bottom: 50px;
     }
     .title{
-      font-family: 'Montserrat',sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 50px;
@@ -455,7 +454,6 @@ footer {
       color: #FFFFFF;
     }
     .text{
-      font-family: 'Poppins',sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
@@ -471,7 +469,7 @@ footer {
     justify-content: center;
     h1{
       @extend %title;
-      width: 600px;
+      width: 650px;
 
     }
   }
@@ -486,7 +484,6 @@ footer {
       justify-content: space-between;
       padding-top: 50px;
       h1{
-        font-family: 'Neue Machina',sans-serif;
         font-style: normal;
         font-weight: 800;
         font-size: 64px;
@@ -494,7 +491,6 @@ footer {
         color: #70A363;
       }
       h4{
-        font-family: 'Neue Machina',sans-serif;
         font-style: normal;
         font-weight: 800;
         font-size: 36px;
@@ -503,7 +499,6 @@ footer {
       }
     }
     .text{
-      font-family: 'Poppins',sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 28px;
@@ -529,7 +524,7 @@ footer {
           margin-top: 70px;
         }
         .title{
-          font-family: 'Neue Machina',sans-serif;
+
           font-style: normal;
           font-weight: 800;
           font-size: 64px;
@@ -538,7 +533,7 @@ footer {
           color: #FFFFFF;
         }
         .text{
-          font-family: 'Poppins',sans-serif;
+
           margin-top: 24px;
           font-style: normal;
           font-weight: 400;
@@ -549,6 +544,189 @@ footer {
           margin-bottom: 265px;
         }
       }
+    }
+  }
+}
+
+.app-page{
+  .title-section, .section-two{
+    height: 1250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+      @extend %title;
+      width: 823px;
+      margin: 0 auto;
+    }
+  }
+
+  .section-one{
+    width: 1450px;
+    margin: 0 auto;
+    .parent-box{
+      display: flex;
+      justify-content: space-between;
+    }
+    .box{
+      width: 390px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 97px;
+      color: #70A363;
+    }
+    .text{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: #FFFFFF;
+    }
+    .text-second{
+      color: #A95CB6;
+    }
+    .text-third{
+      color: #D64A63;
+    }
+    button{
+      @extend %startedBtn;
+      margin: 130px  auto 0 auto;
+      display: block;
+    }
+  }
+
+  .section-two{
+    h1{
+      width: 808px;
+    }
+  }
+
+  .section-three{
+    width: 1100px;
+    margin: 0 auto;
+    height: 870px;
+    background-image: url("/assets/home/iphone.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-top: 345px;
+    .box{
+      background: linear-gradient(180deg, rgba(57, 135, 207, 0.21) 0%, rgba(209, 74, 243, 0.2324) 100%);
+      backdrop-filter: blur(25px);
+      border-radius: 18px;
+      width: 667px;
+      height: 460px;
+
+      padding: 0 27px 15px 60px;
+      box-sizing: border-box;
+    }
+    .title{
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 97px;
+      color: #FFFFFF;
+    }
+    .text-left{
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: #FFFFFF;
+      width: 290px;
+    }
+    .text-right{
+      margin-top: 22px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: #FFFFFF;
+      width:400px;
+      float: right;
+    }
+  }
+}
+
+.brand-page{
+  .section-one, .section-three{
+    height: 1250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+      @extend %title;
+      width: 1070px;
+    }
+  }
+
+  .section-two{
+    width: 1550px;
+    margin: 0 auto;
+    .parent-box{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 57px;
+    }
+    .box{
+      width: 47%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .box-left{
+      font-size: 64px;
+      line-height: 50px;
+      color: #70A363;
+    }
+    .box-left-second{
+      color: #844A8E;
+    }
+    .box-left-third{
+      color: #D64A63;
+    }
+    .box-right{
+      margin-left: 53px;
+      .title{
+        font-size: 50px;
+        line-height: 54px;
+        color: #FFFFFF;
+        font-weight: 600;
+      }
+      .text{
+        font-size: 20px;
+        line-height: 175.5%;
+        color: #FFFFFF;
+        margin-top: 40px;
+        width: 474px;
+
+      }
+    }
+  }
+
+  .brand-section{
+    width: 1500px;
+    margin: 131px auto 0 auto;
+    .title{
+      font-size: 48px;
+      line-height: 132.9%;
+      color: #FFFFFF;
+      font-weight: 800;
+    }
+    .brand{
+      margin-top: 130px;
+      margin-bottom: 196px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .parent-box{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 21px;
+    }
+  }
+
+  .section-three{
+    h1{
+      width: 881px;
+      padding-top: 240px;
+      box-sizing: border-box;
     }
   }
 }

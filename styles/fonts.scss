@@ -11,6 +11,14 @@
   font-family: "Montserrat-Bold";
   src: url("/assets/fonts/Montserrat/static/Montserrat-Bold.ttf") format("truetype");
 }
+@font-face {
+  font-family: "NeueMachina-Bold";
+  src: url("/assets/fonts/neue/neue/NeueMachina-Ultrabold.otf") format("truetype");
+}
+@font-face {
+  font-family: "NeueMachina-Regular";
+  src: url("/assets/fonts/neue/neue/NeueMachina-Regular.otf") format("truetype");
+}
 
 .font-poppins-regular{
   font-family: "Poppins-Regular", sans-serif;
@@ -20,4 +28,10 @@
 }
 .font-montserrat-bold{
   font-family: "Montserrat-Bold", sans-serif;
+}
+.font-neue-machina-bold{
+  font-family: "NeueMachina-Bold", sans-serif;
+}
+.font-neue-machina-regular{
+  font-family: "NeueMachina-Regular", sans-serif;
 }
