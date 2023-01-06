@@ -19,6 +19,14 @@
   font-family: "NeueMachina-Regular";
   src: url("/assets/fonts/neue/neue/NeueMachina-Regular.otf") format("truetype");
 }
+@font-face {
+  font-family: "NeueMachina-Ultrabold";
+  src: url("/assets/fonts/neue/neue/NeueMachina-Ultrabold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("/assets/fonts/inter/Inter-Regular.ttf") format("truetype");
+}
 
 .font-poppins-regular{
   font-family: "Poppins-Regular", sans-serif;
@@ -34,4 +42,10 @@
 }
 .font-neue-machina-regular{
   font-family: "NeueMachina-Regular", sans-serif;
+}
+.font-neue-machina-ultra-bold{
+  font-family: "NeueMachina-Ultrabold", sans-serif;
+}
+.font-inter-regular{
+  font-family: "Inter-Regular", sans-serif;
 }

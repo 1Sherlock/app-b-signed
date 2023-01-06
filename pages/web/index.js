@@ -1,6 +1,7 @@
 import React from 'react';
 import FormComponent from "../../components/FormComponent";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 function Index(props) {
     return (

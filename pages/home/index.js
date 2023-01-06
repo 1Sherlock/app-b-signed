@@ -1,13 +1,15 @@
 import React from 'react';
 import FormComponent from "../../components/FormComponent";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 function Index(props) {
     return (
         <div className="home-page">
+            <Header/>
             <section className="section-one">
-                <h1 className='font-montserrat-extra-bold'>We are
-                    your choice</h1>
+                <h1 className='font-montserrat-extra-bold'>Transform your
+                    business with us</h1>
             </section>
             <section className="section-two">
                 <div className="parent-box">
