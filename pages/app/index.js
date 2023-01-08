@@ -6,8 +6,9 @@ function Index(props) {
     return (
         <div className="app-page">
             <div className="title-section">
-                <h1 className={'font-montserrat-extra-bold'}>We collaborate Strategy to built
-                    the best app for your business</h1>
+                <h1 className={'font-montserrat-extra-bold'}>
+                    We execute proven strategies
+                    to come up with the best solution</h1>
             </div>
             <div className="section-one">
                 <div className="parent-box">
@@ -16,11 +17,12 @@ function Index(props) {
                             01
                         </div>
                         <div className="text font-poppins-regular">
-                            A DISCOVERY CALL
-                            There's a lot that we do before actually starting the project. We do market research and
-                            analysis, understand the competitive landscape, understand and document clients design and
-                            branding preferences, consult with all the key stakeholders to discuss and discover what you
-                            would like to accomplish through mobile application development.
+                            DISCOVERING YOUR NEEDS
+                            We spend the time necessary to completely comprehend your needs and objectives before
+                            beginning any app development project. This entails performing market research and
+                            competitive landscape analysis. Additionally, in order to provide the ideal solution for
+                            your company, we make sure we understand and record your preferences for design and
+                            branding.
                         </div>
                     </div>
                     <div className="box">
@@ -29,11 +31,11 @@ function Index(props) {
                         </div>
                         <div className="text font-poppins-regular ">
                             PLANNING AND RESEARCHING
-                            From the initial discovery call, we try to collect as much as possible details on where you
-                            would like to stand to the end of our initial phase collaboration. The collected details
-                            will be used by our experts to research and propose an adequate plan and scope of work for
-                            your project. Researching and documenting industry leading practice and approaching your
-                            problem in-depth will lead to an proposal delivery that you will either accept or reject.
+                            From the very beginning, we strive to gather as much information as possible to understand
+                            your needs and goals. Our experts then use this information to conduct thorough research and
+                            propose a customized plan and scope of work for your project. By researching
+                            industry-leading practices and thoroughly analyzing your unique goals, we are able to
+                            deliver a proposal that is truly tailored to your needs.
                         </div>
                     </div>
                     <div className="box">
@@ -42,11 +44,10 @@ function Index(props) {
                         </div>
                         <div className="text font-poppins-regular ">
                             DEVELOPMENT & TESTING
-                            Once you go through our proof-of-concept, our assigned team of developers will start their
-                            work and keep you updated at least twice a week on the progress of your project. Depending
-                            on the scale and size of the project, we involve people at least 5 people: Project Manager,
-                            Software Architect, UI/UX Designer, QA Tester, and a Developer, and with their hard work it
-                            generally takes about 2-4 months to complete the project.
+                            As soon as you approve our proof-of-concept, our skilled team of developers will get to work
+                            bringing your project to life. We keep you updated on progress at least twice a week, and
+                            with our team's dedication and hard work, most projects are completed within a few months.
+                            Believe in us to efficiently and effectively bring your vision to fruition.
                         </div>
                     </div>
                 </div>
@@ -63,14 +64,14 @@ function Index(props) {
                         Slyde App
                     </div>
                     <div className="text-left font-poppins-regular">
-                        A unique experience for party lovers and a vital business tool
-                        for those who make the parties
-                        happen!
+                        Slyde is a revolutionary startup that keeps you in the know about all the hottest events
+                        happening in cities across the nation
+
                     </div>
                     <div className="text-right font-poppins-regular">
-                        In development of the project we implemented Reaserch Strategies that helped us to deliberately
-                        stracture the app and all its elements. Technical aspects of the peoject is beautifully allign
-                        with design proposed to the client.
+                        For this project, our development process was expertly crafted to deliver exceptional results.
+                        We ensured the technical aspects were beautifully aligned with the proposed design. The end
+                        result was a highly optimized and successful site.
                     </div>
                 </div>
             </div>

@@ -7,8 +7,8 @@ function Index(props) {
         <div className='brand-page'>
             <div className="section-one">
                 <h1 className="font-montserrat-extra-bold">
-                    Clarity and confidence through
-                    the power of brand strategy and design thinking.
+                    Experience the transformative power
+                    of our brand strategy and design thinking services
                 </h1>
             </div>
             <div className="section-two">
@@ -17,12 +17,13 @@ function Index(props) {
                         <div className="box-left font-neue-machina-regular">01</div>
                         <div className="box-right">
                             <div className="title font-montserrat-bold">
-                                Big ideas that grow your business
+                                Innovative solutions
+                                that drive
                             </div>
                             <div className="text font-poppins-regular">
-                                Vision, in its purest form, is the art of the possible. With our pulse on global trends,
-                                cultural shifts, and consumer behaviors, we’re constantly drumming up new and better
-                                ways to make the most of your opportunities.
+                                The power of vision allows us to truly understand the limitless potential of your brand.
+                                We'll work tirelessly to craft unique and effective strategies that maximize your
+                                opportunities and help your brand thrive in a constantly-evolving digital landscape.
                             </div>
                         </div>
                     </div>
@@ -30,12 +31,12 @@ function Index(props) {
                         <div className="box-left font-neue-machina-regular box-left-second">02</div>
                         <div className="box-right">
                             <div className="title font-montserrat-bold">
-                                The internal alignment you need
+                                Uniting your team behind a shared vision
                             </div>
                             <div className="text font-poppins-regular">
-                                We align your leadership team around the core tenets of your brand to get teams marching
-                                in the same direction. When everyone pulls together, more is done faster with fewer
-                                resources and energy is optimized.
+                                We specialize in creating cohesive and purposeful teams. By tapping into the core
+                                essence of your brand, we can inspire your leadership to work towards a common goal,
+                                maximizing productivity and utilizing resources efficiently.
                             </div>
                         </div>
                     </div>
@@ -45,26 +46,27 @@ function Index(props) {
                         <div className="box-left font-neue-machina-regular box-left-third">03</div>
                         <div className="box-right">
                             <div className="title font-montserrat-bold">
-                                A brand you'll be proud of
+                                Creating a brand identity to shine
                             </div>
                             <div className="text font-poppins-regular">
-                                We help leaders develop a modern mindset that puts brand at the center of business
-                                strategy. Our guidance lays the foundation for transformational change that you’ll be
-                                proud to champion.
+                                It's clear that placing your brand at the heart of your business strategy is crucial for
+                                success in today's fast-paced and competitive market. That's why we offer expert
+                                guidance to help leaders like you develop a modern and brand-centric mindset.
                             </div>
                         </div>
                     </div>
                     <div className="box">
-                        <div className="box-left font-neue-machina-regular box-left-third">04</div>
+                        <div className="box-left font-neue-machina-regular box-left">04</div>
                         <div className="box-right">
                             <div className="title font-montserrat-bold">
-                                Design solutions
-                                that highlight your brand
+                                Crafting visually stunning
+                                brand experiences
                             </div>
                             <div className="text font-poppins-regular">
-                                We help leaders develop a modern mindset that puts brand at the center of business
-                                strategy. Our guidance lays the foundation for transformational change that you’ll be
-                                proud to champion.
+                                Successful branding relies on imaginative thinking, strategic planning, and expertly
+                                made designs. This is why we include these principles into each and every project we
+                                work on to make absolutely sure that our clients stand out in a crowded market and have
+                                a meaningful connection with their audience.
                             </div>
                         </div>
                     </div>
@@ -80,7 +82,7 @@ function Index(props) {
                     <img src="/assets/partner/slyde.svg" alt=""/>
                     <img src="/assets/partner/icars.svg" alt=""/>
                 </div>
-                
+
                 <div className="parent-box">
                     <div className="box">
                         <img src="/assets/home/Pepsi.png" alt=""/>
@@ -94,13 +96,13 @@ function Index(props) {
                         <img src="/assets/home/Slyde.png" alt=""/>
                     </div>
                     <div className="box">
-                        <img src="/assets/home/Icars.png" alt=""/>
+                        <img src="/assets/home/kham1.png" alt=""/>
                     </div>
                 </div>
             </section>
             <div className="section-three">
                 <h1 className="font-montserrat-extra-bold">
-                    ARE YOU READY TO RALLY AROUND YOUR BIG IDEA?
+                    Ready to bring your big idea to life?
                 </h1>
             </div>
             <section className="form-section">
