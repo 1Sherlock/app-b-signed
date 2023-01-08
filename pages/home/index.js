@@ -6,11 +6,12 @@ import Header from "../../components/Header";
 function Index(props) {
     return (
         <div className="home-page">
-            <Header/>
+           {/* <Header/>*/}
             <section className="section-one">
                 <h1 className='font-montserrat-extra-bold'>Transform your
                     business with us</h1>
             </section>
+
             <section className="section-two">
                 <div className="parent-box">
                     <div className="box">
@@ -18,12 +19,10 @@ function Index(props) {
                             Fully Remote
                         </div>
                         <div className="text font-poppins-regular">
-                            We believe in the power of remote work to bring people together and create a more efficient,
-                            productive, and sustainable business process. By operating fully remotely, we can tap into
-                            the talents and expertise of professionals from around the globe, fostering a diverse and
-                            inclusive team. Our clients benefit from faster turnaround times and lower costs thanks to
-                            our streamlined, virtual processes. So, whether you're a client or a team member, our fully
-                            remote business model is a win-win for everyone involved.
+                            Join the future of work with us. Our commitment to remote processes allows for faster
+                            turnaround times and cost savings, all while fostering a sense of community and
+                            collaboration among our team. Experience the benefits of a streamlined, efficient process.
+
                         </div>
                     </div>
                     <div className="box">
@@ -31,9 +30,10 @@ function Index(props) {
                             Fast
                         </div>
                         <div className="text font-poppins-regular">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
+                            We understand that time is of the essence when it comes to achieving your business goals.
+                            That's why we pride ourselves on our fast, efficient process that delivers results quickly.
+                            We use cutting-edge technology and proven project management methods to ensure that we meet
+                            your deadlines and exceed expectations.
                         </div>
                     </div>
                 </div>
@@ -43,9 +43,10 @@ function Index(props) {
                             Approach
                         </div>
                         <div className="text font-poppins-regular">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
+                            Get results you can trust with us. Our commitment to excellence is evident in every step of
+                            our process, from start to finish. Our focus on attention to detail guarantees that your
+                            project will be completed to the highest standards.
+
                         </div>
                     </div>
                     <div className="box ">
@@ -53,71 +54,76 @@ function Index(props) {
                             Creativity
                         </div>
                         <div className="text font-poppins-regular">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
+                            Our team of experts are constantly pushing the boundaries and coming up with fresh and
+                            innovative ideas to help our clients stand out in their industry. We are dedicated to
+                            delivering exceptional results in all that we do - from website design and marketing
+                            campaigns to product creation. Choose us for unparalleled success.
                         </div>
                     </div>
                 </div>
                 <button className={'font-montserrat-bold'}>Get Started</button>
             </section>
+
             <section className="section-three">
                 <h1 className={'font-montserrat-extra-bold'}>Our formula
                     for your success</h1>
             </section>
+
             <section className="section-four">
                 <div className="absolute-left"/>
                 <div className="absolute-right"/>
-                <div className="all-step">
-                    <div className="step step-one font-montserrat-extra-bold">
-                        1 Step
-                    </div>
-                    <div className="arrow">
-                        <img src="/assets/home/right.svg" alt=""/>
-                    </div>
-                    <div className="step step-two font-montserrat-extra-bold">
-                        2 Step
-                    </div>
-                    <div className="arrow">
-                        <img src="/assets/home/right.svg" alt=""/>
-                    </div>
-                    <div className="step step-three font-montserrat-extra-bold">
-                        3 Step
-                    </div>
-                    <div className="arrow">
-                        <img src="/assets/home/right.svg" alt=""/>
-                    </div>
-                    <div className="step step-four font-montserrat-extra-bold">
-                        4 Step
-                    </div>
-                </div>
-                <div className="parent-box">
-                    <div className="box">
-                        <div className="circle"/>
-                        <div className="text font-poppins-regular">
-                            1 on 1 meeting with our bussiness consultant. In this step we will have full picture of your
-                            idea and goals you desire to accopmlish with us
+                <div className="mobile-step">
+                    <div className="all-step">
+                        <div className="step step-one font-montserrat-extra-bold">
+                            1 Step
+                        </div>
+                        <div className="arrow">
+                            <img src="/assets/home/right.svg" alt=""/>
+                        </div>
+                        <div className="step step-two font-montserrat-extra-bold">
+                            2 Step
+                        </div>
+                        <div className="arrow">
+                            <img src="/assets/home/right.svg" alt=""/>
+                        </div>
+                        <div className="step step-three font-montserrat-extra-bold">
+                            3 Step
+                        </div>
+                        <div className="arrow">
+                            <img src="/assets/home/right.svg" alt=""/>
+                        </div>
+                        <div className="step step-four font-montserrat-extra-bold">
+                            4 Step
                         </div>
                     </div>
-                    <div className="box">
-                        <div className="circle"/>
-                        <div className="text font-poppins-regular">
-                            This step is designed for research analysis of the industry you on. Within this step you
-                            will be constantly updated about work done
+                    <div className="parent-box">
+                        <div className="box">
+                            <div className="circle"/>
+                            <div className="text font-poppins-regular">
+                                Initial phase includes meeting to understand your business, audience, and goals. We'll also
+                                analyze your online presence for improvement opportunities.
+                            </div>
                         </div>
-                    </div>
-                    <div className="box">
-                        <div className="circle"/>
-                        <div className="text font-poppins-regular">
-                            Our prototype proposal will be ready to be presented to you. This step is a presentation of
-                            all software aspects of the product as well as marketing proposals
+                        <div className="box">
+                            <div className="circle"/>
+                            <div className="text font-poppins-regular">
+                                Once we have a clear understanding of your needs, we conduct thorough research and come up
+                                with a detailed plan for the project.
+                            </div>
                         </div>
-                    </div>
-                    <div className="box">
-                        <div className="circle"/>
-                        <div className="text font-poppins-regular">
-                            Marketing strategies testing and launching final soft online. Our consultants will be online
-                            for any questions that might appear
+                        <div className="box">
+                            <div className="circle"/>
+                            <div className="text font-poppins-regular">
+                                With a solid plan in place, we begin developing the product or campaign. This may involve
+                                creating a prototype or a minimum viable product for you to review.
+                            </div>
+                        </div>
+                        <div className="box">
+                            <div className="circle"/>
+                            <div className="text font-poppins-regular">
+                                We work closely with you to deliver the finished product and address any final concerns or
+                                adjustments. Trust us to go above and beyond to meet your needs.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -126,6 +132,7 @@ function Index(props) {
                 </div>
                 <button className={'font-montserrat-bold'}>Get Started</button>
             </section>
+
             <section className="partner-section">
                 <h1 className={'font-montserrat-extra-bold'}>Proudly working with</h1>
                 <div className="all-partner">
@@ -143,18 +150,20 @@ function Index(props) {
                     </div>
                 </div>
             </section>
+
             <section className="section-five">
                 <img src="/assets/home/bsigned.svg" alt=""/>
                 <button className={'font-montserrat-bold'}>Get Started</button>
             </section>
+
             <section className="form-section">
                 <FormComponent/>
             </section>
+
             <footer>
                 <Footer/>
             </footer>
         </div>
     );
 }
-
 export default Index;

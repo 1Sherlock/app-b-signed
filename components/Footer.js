@@ -4,10 +4,10 @@ function Footer(props) {
     return (
         <div className="footer-section">
             <div className="footer-section-left-side">
-                <a href="#">
+                <a href="#" className="brand">
                     <img src="/assets/icons/logo-footer.svg" alt=""/>
                 </a>
-                <p className="text font-poppins-regular">C 2022 All Rights reserved
+                <p className="text font-poppins-regular desktop-footer-text">C 2022 All Rights reserved
                     Be Signed  LLC</p>
             </div>
             <div className="footer-section-right-side">
@@ -36,6 +36,8 @@ function Footer(props) {
                     </div>
                 </div>
             </div>
+            <p className="text font-poppins-regular mobile-footer-text">C 2022 All Rights reserved
+                Be Signed  LLC</p>
         </div>
     );
 }
