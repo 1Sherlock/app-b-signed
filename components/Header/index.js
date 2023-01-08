@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Link from "next/link";
 import Slider from "react-slick";
-
+import "locomotive-scroll/dist/locomotive-scroll.css"
 const Header = () => {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
@@ -22,7 +22,7 @@ const Header = () => {
         } ,1000)
     }, [date, time])
     return (
-        <div className="main-header">
+        <div className="main-header" data-scroll-section>
             <div className="main-header-nav">
                 <Link href="/"><img src="/assets/icons/logo.svg" alt="bsigned" className="logo"/></Link>
                 <ul>
