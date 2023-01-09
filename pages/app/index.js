@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 
 function Index(props) {
     return (
-        <div className="app-page">
+        <div className="app-page" data-scroll-section>
             <div className="title-section">
                 <h1 className={'font-montserrat-extra-bold'}>
                     We execute proven strategies

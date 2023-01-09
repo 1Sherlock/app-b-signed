@@ -5,8 +5,8 @@ import Header from "../../components/Header";
 
 function Index(props) {
     return (
-        <div className="home-page">
-           {/* <Header/>*/}
+        <div className="home-page" data-scroll-section>
+            <Header/>
             <section className="section-one">
                 <h1 className='font-montserrat-extra-bold'>Transform your
                     business with us</h1>
@@ -156,7 +156,7 @@ function Index(props) {
                 <button className={'font-montserrat-bold'}>Get Started</button>
             </section>
 
-            <section className="form-section">
+            <section className="form-section" id="js-target">
                 <FormComponent/>
             </section>
 

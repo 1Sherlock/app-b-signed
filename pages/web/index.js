@@ -13,7 +13,7 @@ function Index(props) {
         slidesToScroll: 1
     };
     return (
-        <div className='web-page'>
+        <div className='web-page' data-scroll-section>
             <div className="section-one">
                 <h1 className={'font-montserrat-extra-bold'}>We are
                     your choice</h1>

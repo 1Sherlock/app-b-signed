@@ -1,14 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import Link from "next/link";
 import Slider from "react-slick";
-import "locomotive-scroll/dist/locomotive-scroll.css"
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 const Header = () => {
+
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const settings = {
         dots: true,
         arrows:false,
         infinite: true,
+        autoplay: true,
+        autoplaySpeed: 7000,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
@@ -21,15 +24,24 @@ const Header = () => {
             setDate((dateTemp.getDate() > 9 ? dateTemp.getDate() : "0" + dateTemp.getDate()) + "." + ((dateTemp.getMonth() + 1) > 9 ? (dateTemp.getMonth() + 1) : "0" + (dateTemp.getMonth() + 1)) + "." + dateTemp.getFullYear())
         } ,1000)
     }, [date, time])
+
+    const { scroll } = useLocomotiveScroll();
+
+    const toContact = () => {
+        const target = document.querySelector('#js-target');
+
+        scroll.scrollTo(target);
+    }
+
     return (
-        <div className="main-header" data-scroll-section>
+        <div className="main-header">
             <div className="main-header-nav">
                 <Link href="/"><img src="/assets/icons/logo.svg" alt="bsigned" className="logo"/></Link>
                 <ul>
                     <li><Link href="/web" className="font-inter-regular">Web Development</Link></li>
                     <li><Link href="/app" className="font-inter-regular">App Development</Link></li>
                     <li><Link href="/brand" className="font-inter-regular">Branding</Link></li>
-                    <li><Link href="/" className="font-inter-regular">Contact Us</Link></li>
+                    <li><Link href="#" className="font-inter-regular" onClick={toContact}>Contact Us</Link></li>
                 </ul>
                 <a href="tel:+15043335601"><img src="/assets/icons/telephone.svg" alt="telephone"/></a>
             </div>

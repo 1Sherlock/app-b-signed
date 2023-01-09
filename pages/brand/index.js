@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 
 function Index(props) {
     return (
-        <div className='brand-page'>
+        <div className='brand-page' data-scroll-section>
             <div className="section-one">
                 <h1 className="font-montserrat-extra-bold">
                     Experience the transformative power
