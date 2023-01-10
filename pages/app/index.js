@@ -59,6 +59,7 @@ function Index(props) {
                 </h1>
             </div>
             <div className="section-three">
+                <img className="mobile-iphone-img" src="/assets/home/iphone.png" alt=""/>
                 <div className="box">
                     <div className="title font-montserrat-bold">
                         Slyde App

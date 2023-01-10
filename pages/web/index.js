@@ -112,7 +112,7 @@ function Index(props) {
                             elevate your brand and drive your business objectives forward
                         </div>
                     </div>
-                  {/*  <div className="carousel-text">
+                 {/*   <div className="carousel-text">
                         <div className="text  font-poppins-regular">
                             2. Our unique brand identity solutions will truly capture the
                             essence of your company and set you apart
@@ -134,6 +134,8 @@ function Index(props) {
                     </div>*/}
 
             </div>
+
+
             <div className="section-four">
                 <div className="parent-box">
                     <div className="box">
@@ -152,6 +154,8 @@ function Index(props) {
                     </div>
                 </div>
             </div>
+
+
             <section className="form-section">
                 <FormComponent/>
             </section>
