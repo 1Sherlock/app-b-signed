@@ -1,6 +1,7 @@
 import React from 'react';
 import FormComponent from "../../components/FormComponent";
 import Footer from "../../components/Footer";
+import Link from "next/link";
 
 function Index(props) {
     return (
@@ -85,18 +86,18 @@ function Index(props) {
 
                 <div className="parent-box">
                     <div className="box">
-                        <img src="/assets/home/Pepsi.png" alt=""/>
+                        <Link href="/projects/pepsi"><img src="/assets/home/Pepsi.png" alt=""/></Link>
                     </div>
                     <div className="box">
-                        <img src="/assets/home/Icars.png" alt=""/>
+                        <Link href="/projects/i-cars"><img src="/assets/home/Icars.png" alt=""/></Link>
                     </div>
                 </div>
                 <div className="parent-box">
                     <div className="box">
-                        <img src="/assets/home/Slyde.png" alt=""/>
+                        <Link href="/projects/social"><img src="/assets/home/Slyde.png" alt=""/></Link>
                     </div>
                     <div className="box">
-                        <img src="/assets/home/kham1.png" alt=""/>
+                        <Link href="/projects/khan-academy"><img src="/assets/home/kham1.png" alt=""/></Link>
                     </div>
                 </div>
             </section>
@@ -105,7 +106,7 @@ function Index(props) {
                     Ready to bring your big idea to life?
                 </h1>
             </div>
-            <section className="form-section">
+            <section className="form-section" id="js-target">
                 <FormComponent/>
             </section>
             <footer>

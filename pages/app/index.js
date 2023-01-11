@@ -76,7 +76,7 @@ function Index(props) {
                     </div>
                 </div>
             </div>
-            <section className="form-section">
+            <section className="form-section" id="js-target">
                 <FormComponent/>
             </section>
             <footer>

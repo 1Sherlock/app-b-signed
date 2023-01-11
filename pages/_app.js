@@ -6,12 +6,13 @@ import '/styles/globals.scss'
 import '/styles/style.scss';
 import '/styles/fonts.scss';
 import '/styles/header.scss';
+import "/styles/projects.scss";
 
 import {LocomotiveScrollProvider} from 'react-locomotive-scroll'
 import {useRef} from "react";
 
 export default function App({Component, pageProps}) {
-    const containerRef = useRef(null)
+    const containerRef = useRef(null);
     return (<LocomotiveScrollProvider
         options={
             {

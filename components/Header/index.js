@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import Link from "next/link";
 import Slider from "react-slick";
-import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import Navbar from "../Navbar";
 const Header = () => {
 
     const [date, setDate] = useState("");
@@ -25,26 +24,11 @@ const Header = () => {
         } ,1000)
     }, [date, time])
 
-    const { scroll } = useLocomotiveScroll();
 
-    const toContact = () => {
-        const target = document.querySelector('#js-target');
-
-        scroll.scrollTo(target);
-    }
 
     return (
         <div className="main-header">
-            <div className="main-header-nav">
-                <Link href="/"><img src="/assets/icons/logo.svg" alt="bsigned" className="logo"/></Link>
-                <ul>
-                    <li><Link href="/web" className="font-inter-regular">Web Development</Link></li>
-                    <li><Link href="/app" className="font-inter-regular">App Development</Link></li>
-                    <li><Link href="/brand" className="font-inter-regular">Branding</Link></li>
-                    <li><Link href="#" className="font-inter-regular" onClick={toContact}>Contact Us</Link></li>
-                </ul>
-                <a href="tel:+15043335601"><img src="/assets/icons/telephone.svg" alt="telephone"/></a>
-            </div>
+            <Navbar/>
 
             <div className="main-header-content">
                 <div className="main-header-content-left">
