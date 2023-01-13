@@ -152,7 +152,9 @@ function Index(props) {
             </section>
 
             <section className="section-five">
-                <img src="/assets/home/bsigned.svg" alt=""/>
+                <video muted autoPlay loop playsinline>
+                    <source src="/assets/video/home.mp4" type="video/mp4"/>
+                </video>
                 <button className={'font-montserrat-bold'}>Get Started</button>
             </section>
 
