@@ -6,7 +6,7 @@ import Header from "../../components/Header";
 function Index(props) {
     return (
         <div className="home-page" data-scroll-section>
-            <Header/>
+           {/* <Header/>*/}
             <section className="section-one">
                 <h1 className='font-montserrat-extra-bold'>Transform your
                     business with us</h1>
