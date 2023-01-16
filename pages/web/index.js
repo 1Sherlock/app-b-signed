@@ -2,6 +2,7 @@ import React from 'react';
 import FormComponent from "../../components/FormComponent";
 import Footer from "../../components/Footer";
 import Slider from "react-slick";
+import WebHeader from "../../components/WebHeader";
 
 function Index(props) {
     const settings = {
@@ -14,6 +15,7 @@ function Index(props) {
     };
     return (
         <div className='web-page' data-scroll-section>
+            <WebHeader/>
             <div className="section-one">
                 <h1 className={'font-montserrat-extra-bold'}>We are
                     your choice</h1>

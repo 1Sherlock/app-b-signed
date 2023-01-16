@@ -4,6 +4,10 @@
     height: 100vh;
     background-image: url("/assets/images/icars.png");
     background-size: cover;
+    @media (max-width: 576px){
+      background-image: url("/assets/images/icars-mobile.png");
+      height: 454px;
+    }
   }
   &.khan{
     header{
@@ -40,6 +44,13 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
+      @media (max-width: 576px){
+        font-size: 25px;
+        line-height: 132.9%;
+      }
+    }
+    @media (max-width: 576px){
+      padding: 18px 34px;
     }
   }
 
@@ -52,6 +63,13 @@
     max-width: 100%;
     margin-top: 33px;
     margin-bottom: 127px;
+    @media (max-width: 576px){
+      font-size: 40px;
+      line-height: 39px;
+      width: 206px;
+      max-width: 100%;
+      margin-bottom: 14px;
+    }
   }
   &.social{
     h1{
@@ -67,6 +85,10 @@
   .container{
     width: 70%;
     margin: 0 auto;
+    @media (max-width: 576px){
+      width: 100%;
+      padding: 0 32px;
+    }
   }
   .info-content{
     display: flex;
@@ -79,6 +101,10 @@
         line-height: 18px;
         color: #FFFFFF;
         margin: 0;
+        @media (max-width: 576px){
+          font-size: 8px;
+          line-height: 12px;
+        }
       }
       p{
         font-weight: 400;
@@ -86,9 +112,21 @@
         line-height: 157%;
         color: #FFFFFF;
         margin: 0;
+        @media (max-width: 576px){
+          font-size: 10px;
+          line-height: 197%;
+        }
       }
       &:nth-child(3){
         width: 526px;
+        max-width: 100%;
+      }
+    }
+    @media (max-width: 1250px){
+      flex-direction: column;
+      margin-bottom: 45px;
+      .info-content-item{
+        margin-bottom: 20px;
       }
     }
   }
@@ -98,6 +136,12 @@
       height: 740px;
     }
     margin-bottom: 76px;
+    @media (max-width: 576px){
+      margin-bottom: 67px;
+      div{
+        height: 317px;
+      }
+    }
   }
   .video-info-text{
     font-weight: 400;
@@ -106,6 +150,13 @@
     color: #FFFFFF;
     width: 50%;
     margin: 0 auto 341px;
+    @media (max-width: 576px){
+      font-size: 10px;
+      line-height: 157%;
+      width: 100%;
+      padding: 0 63px;
+      margin-bottom: 56px;
+    }
   }
   .carousel-text{
     font-weight: 700;
@@ -115,11 +166,23 @@
     margin: 0 0 1px;
   }
   .car-content{
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    //display: flex;
+    //justify-content: flex-end;
+    //flex-wrap: wrap;
     img{
-      margin-left: 70px;
+      width: 485px;
+      margin-right: 70px;
+    }
+    @media (max-width: 1750px){
+      img{
+        width: 400px;
+      }
+    }
+    @media (max-width: 576px){
+      img{
+        width: 142px;
+        margin-right: 23px;
+      }
     }
   }
   .info-text-content{
@@ -145,6 +208,21 @@
       margin: 0;
       text-align: right;
     }
+    @media (max-width: 576px){
+      margin-top: 125px;
+      margin-bottom: 89px;
+      h2{
+        font-size: 30px;
+        line-height: 132.9%;
+        text-align: left;
+        margin-bottom: 31px;
+      }
+      h3{
+        font-size: 12px;
+        line-height: 20px;
+        text-align: left;
+      }
+    }
   }
   .more-text{
     font-weight: 800;
@@ -152,10 +230,42 @@
     line-height: 132.9%;
     color: #FFFFFF;
     margin: 0 0 87px;
+    @media (max-width: 1500px) {
+      margin-bottom: 50px;
+      font-size: 35px;
+    }
+    @media (max-width: 576px){
+      font-size: 15px;
+      line-height: 132.9%;
+      margin-bottom: 23px;
+    }
   }
   .project-content{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 500px;
+    a{
+      width: calc(40% - 45px);
+      display: block;
+      &:nth-child(1){
+        margin-right: 90px;
+      }
+    }
+    img{
+      width: 100%;
+    }
+    @media (max-width: 576px){
+      flex-direction: column;
+      margin-bottom: 0px;
+      a{
+        width: 100%;
+        margin-bottom: 30px;
+        height: 117px;
+        img{
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
   }
 }

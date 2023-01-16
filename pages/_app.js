@@ -7,6 +7,8 @@ import '/styles/style.scss';
 import '/styles/fonts.scss';
 import '/styles/header.scss';
 import "/styles/projects.scss";
+import "/styles/web-header.scss";
+import "/styles/bran-header.scss";
 
 import {LocomotiveScrollProvider} from 'react-locomotive-scroll'
 import {useRef} from "react";

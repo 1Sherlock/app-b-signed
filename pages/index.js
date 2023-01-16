@@ -43,7 +43,7 @@ const Home = () => {
                     </div>
                     <div className={styles.videoWrap}>
                         <video muted autoPlay loop playsInline>
-                            <source src="/assets/video/shart.mp4"/>
+                            <source src="/assets/video/shart.mp4" type="video/mp4"/>
                         </video>
                         <div className={styles.rotateTextWrap}>
                             <div  id="nizom">

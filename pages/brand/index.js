@@ -2,10 +2,12 @@ import React from 'react';
 import FormComponent from "../../components/FormComponent";
 import Footer from "../../components/Footer";
 import Link from "next/link";
+import BranHeader from "../../components/BranHeader";
 
 function Index(props) {
     return (
         <div className='brand-page' data-scroll-section>
+            <BranHeader/>
             <div className="section-one">
                 <h1 className="font-montserrat-extra-bold">
                     Experience the transformative power

@@ -1,0 +1,108 @@
+.web-page-main-header{
+  height: 100vh;
+  width: 100%;
+
+  .web-page-main-header-content{
+    height: calc(100vh - 122px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .web-page-main-header-content-left{
+      width: 410px;
+      position: absolute;
+      left: 200px;
+      top: 25vh;
+
+      h3{
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 50px;
+        color: #FFFFFF;
+      }
+    }
+    img{
+      width: 611px;
+      max-width: 100%;
+
+      &.web-page-header-img{
+        width: 32vw;
+      }
+    }
+    button{
+      display: none;
+    }
+  }
+  .text-mobile{
+    display: none;
+  }
+  &.app{
+    .web-page-main-header-content{
+      .web-page-main-header-content-left{
+        top: 135px;
+      }
+    }
+  }
+
+  @media (max-width: 1200px){
+    .web-page-main-header-content{
+      .web-page-main-header-content-left{
+        width: 333px;
+        left: 100px;
+        top: 103px;
+        h3{
+          font-size: 27px;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+  @media (max-width: 992px){
+    .web-page-main-header-content{
+      display: block;
+      height: auto;
+      text-align: center;
+      .web-page-main-header-content-left{
+        position: static;
+        margin: 0 auto;
+        margin-top: 50px;
+        h3{
+          margin: 0;
+        }
+      }
+    }
+  }
+  @media (max-width: 576px){
+    .web-page-main-header-content{
+      height: auto;
+      .web-page-main-header-content-left{
+        display: none;
+      }
+      .text-mobile{
+        display: block;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 36px;
+        color: #FFFFFF;
+        width: 262px;
+        margin: 0 auto;
+        text-align: left;
+      }
+      button{
+        display: block;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 20px;
+        color: #FFFFFF;
+        outline: 0;
+        border: 3px solid #FFFFFF;
+        border-radius: 56px;
+        background-color: transparent;
+        padding: 10px 30px;
+        margin: 70px auto 241px;
+      }
+    }
+
+  }
+}

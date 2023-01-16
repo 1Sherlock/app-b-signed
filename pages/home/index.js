@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import FormComponent from "../../components/FormComponent";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 function Index(props) {
+    useEffect(() => {
+        document.getElementById("tap-to").style.display = "block"
+        return () => {
+            document.getElementById("tap-to").style.display = "none"
+        }
+    }, [])
     return (
         <div className="home-page" data-scroll-section>
-           {/* <Header/>*/}
+            <Header/>
             <section className="section-one">
                 <h1 className='font-montserrat-extra-bold'>Transform your
                     business with us</h1>
@@ -152,7 +158,7 @@ function Index(props) {
             </section>
 
             <section className="section-five">
-                <video muted autoPlay loop playsinline>
+                <video muted autoPlay loop playsInline>
                     <source src="/assets/video/home.mp4" type="video/mp4"/>
                 </video>
                 <button className={'font-montserrat-bold'}>Get Started</button>
