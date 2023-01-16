@@ -43,7 +43,7 @@ function Index(props) {
                         </div>
                     </div>
                 </div>
-                <div className="parent-box">
+                <div className="parent-box second-parent-box">
                     <div className="box">
                         <div className="title title-pink font-montserrat-bold">
                             Approach

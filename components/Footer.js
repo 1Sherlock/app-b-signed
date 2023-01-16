@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Link from "next/link";
 function Footer(props) {
     return (
         <div className="footer-section">
@@ -7,7 +7,7 @@ function Footer(props) {
                 <a href="#" className="brand">
                     <img src="/assets/icons/logo-footer.svg" alt=""/>
                 </a>
-                <p className="text font-poppins-regular desktop-footer-text">C 2022 All Rights reserved
+                <p className="text font-poppins-regular desktop-footer-text">C 2023 All Rights reserved
                     Be Signed  LLC</p>
             </div>
             <div className="footer-section-right-side">
@@ -15,9 +15,10 @@ function Footer(props) {
                     <div className="nav">
                         <b className={'font-montserrat-extra-bold'}>Company</b>
                         <ul>
-                            <li><a className={'font-poppins-regular'} href="#">Services</a></li>
-                            <li><a className={'font-poppins-regular'} href="#">Projects</a></li>
-                            <li><a className={'font-poppins-regular'} href="#">Reviews</a></li>
+                            <li><Link className={'font-poppins-regular'} href="/home">Home</Link></li>
+                            <li><Link className={'font-poppins-regular'} href="/web">Web development</Link></li>
+                            <li><Link className={'font-poppins-regular'} href="/app">App development</Link></li>
+                            <li><Link className={'font-poppins-regular'} href="/brand">Branding</Link></li>
                         </ul>
                     </div>
                     <div className="nav">
@@ -25,13 +26,13 @@ function Footer(props) {
                         <ul>
                             <li><a className={'font-poppins-regular'} href="#">
                                 <img src="/assets/icons/phone.svg" alt=""/>
-                                +1 (504) 333 5601</a></li>
-                            <li><a className={'font-poppins-regular'} href="#">
+                                <span>+1 (504) 333 5601</span></a></li>
+                            <li><a className={'font-poppins-regular'} href="https://www.instagram.com/bsigned.us/">
                                 <img src="/assets/icons/instagram.svg" alt=""/>
-                                @besigned.us</a></li>
-                            <li><a className={'font-poppins-regular'} href="#">
+                                <span>@besigned.us</span></a></li>
+                            <li><a className={'font-poppins-regular'} href="mailto:vasimlaban@bsigned.us">
                                 <img src="/assets/icons/email.svg" alt=""/>
-                                costumer@besigned.us</a></li>
+                                <span>costumer@besigned.us</span></a></li>
                         </ul>
                     </div>
                 </div>
