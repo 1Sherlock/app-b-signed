@@ -1,92 +1,200 @@
 * {
-    box-sizing: border-box;
-    outline: 0;
-}
-html{
-    scroll-behavior: smooth;
-    font-size: 16px;
-    body{
-        margin: 0;
-        font-family: "Poppins-Regular", sans-serif;
-
-    }
+  box-sizing: border-box;
+  outline: 0;
 }
 
-.icon{
-    width: 19px;
-    height: 19px;
-    display: inline-block;
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 
-    mask-size: 100% 100%;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    -webkit-mask-size: 100% 100%;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
+  body {
+    margin: 0;
+    font-family: "Poppins-Regular", sans-serif;
 
-    background-color: #FFFFFF;
-
-    &-phone{
-        mask-image: url("/assets/icons/phone.svg");
-        -webkit-mask-image: url("/assets/icons/phone.svg");
-    }
-    &-instagram{
-        mask-image: url("/assets/icons/instagram.svg");
-        -webkit-mask-image: url("/assets/icons/instagram.svg");
-    }
-    &-email{
-        mask-image: url("/assets/icons/email.svg");
-        -webkit-mask-image: url("/assets/icons/email.svg");
-    }
+  }
 }
-.scroll-down-item{
-    position: fixed;
-    right: 237px;
-    bottom: 10px;
-    cursor: pointer;
-    animation-name: anim-title;
-    animation-duration: 15s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    z-index: 1;
-    display: none;
-    transition: all 0.2s linear;
-    &:hover{
-        bottom: 30px;
-    }
-}
-.main-header-nav{
-    padding: 58px 200px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .logo{
-        width: 197px;
-    }
 
-    ul{
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        li{
-            display: inline-block;
-            margin: 0 26.5px;
-            a{
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 22px;
-                color: #FFFFFF;
-                text-decoration: none;
-                transition: all 0.2s linear;
-                &:hover, &.active{
-                    color: #83CBFF;
-                }
-            }
+.icon {
+  width: 19px;
+  height: 19px;
+  display: inline-block;
+
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+
+  background-color: #FFFFFF;
+
+  &-phone {
+    mask-image: url("/assets/icons/phone.svg");
+    -webkit-mask-image: url("/assets/icons/phone.svg");
+  }
+
+  &-instagram {
+    mask-image: url("/assets/icons/instagram.svg");
+    -webkit-mask-image: url("/assets/icons/instagram.svg");
+  }
+
+  &-email {
+    mask-image: url("/assets/icons/email.svg");
+    -webkit-mask-image: url("/assets/icons/email.svg");
+  }
+}
+
+.scroll-down-item {
+  position: fixed;
+  right: 237px;
+  bottom: 10px;
+  cursor: pointer;
+  animation-name: anim-title;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: 1;
+  display: none;
+  transition: all 0.2s linear;
+
+  &:hover {
+    bottom: 30px;
+  }
+  @media (max-width: 576px){
+    display: none!important;
+  }
+}
+
+.layer-scroll-component{
+  position: fixed;
+  width: 177px;
+  height: 177px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+  cursor: pointer;
+  display: none;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+
+  animation-name: anim-tap;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  @media (max-width: 992px){
+    display: none!important;
+  }
+}
+
+.main-header-nav {
+  padding: 58px 200px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    width: 197px;
+    @media (max-width: 1500px) {
+      width: 150px;
+    }
+    @media (max-width: 576px){
+      display: none;
+    }
+  }
+  .logo-mobile{
+    @media (min-width: 577px){
+      display: none;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin: 0 26.5px;
+      @media (max-width: 1500px) {
+        margin: 0 15px;
+      }
+
+      a {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: all 0.2s linear;
+
+        &:hover, &.active {
+          color: #83CBFF;
         }
+      }
     }
+
+    @media (max-width: 880px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    padding: 28px 100px 0;
+
+  }
+  @media (max-width: 992px) {
+    padding: 28px 50px 0;
+  }
 }
+
+.main-header-nav-mobile {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(34, 34, 34, 0.42);
+  backdrop-filter: blur(15px);
+  height: 52px;
+  align-items: center;
+  z-index: 2;
+
+  a {
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+    text-align: center;
+    color: #FFFFFF;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+  }
+  @media (min-width: 880px){
+    display: none;
+  }
+}
+
 @keyframes anim-title {
-    100%{
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes anim-tap{
+  25%{
+    transform: scale(1.1);
+  }
+  50%{
+    transform: scale(1.09);
+  }
+  75%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
 }

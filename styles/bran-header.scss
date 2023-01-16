@@ -1,0 +1,52 @@
+.brand-page-main-header{
+  height: 100vh;
+  width: 100%;
+
+  .brand-page-main-header-content{
+    padding-top: 100px;
+    .brand-page-main-header-content-img{
+      text-align: center;
+      width: 845px;
+      max-width: 100%;
+      margin: 0 auto;
+      img{
+        width: 100%;
+      }
+    }
+    .brand-page-main-header-content-text{
+      margin-left: 200px;
+      position: relative;
+      width: 286px;
+
+      p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 157%;
+        color: #FFFFFF;
+      }
+      &:after{
+        content: '';
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: #F86161;
+        position: absolute;
+        top: -24px;
+        left: 0;
+      }
+    }
+  }
+
+  @media (max-width: 992px){
+    .brand-page-main-header-content{
+      .brand-page-main-header-content-img{
+        margin-bottom: 138px;
+      }
+      .brand-page-main-header-content-text{
+        margin: 0 auto!important;
+      }
+    }
+
+  }
+
+}

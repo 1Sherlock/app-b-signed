@@ -1,10 +1,12 @@
 import React from 'react';
 import FormComponent from "../../components/FormComponent";
 import Footer from "../../components/Footer";
+import AppHeader from "../../components/AppHeader";
 
 function Index(props) {
     return (
         <div className="app-page" data-scroll-section>
+            <AppHeader/>
             <div className="title-section">
                 <h1 className={'font-montserrat-extra-bold'}>
                     We execute proven strategies

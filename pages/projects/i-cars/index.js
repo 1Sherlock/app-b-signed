@@ -20,11 +20,12 @@ const ICars = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoPlay: true,
+        autoplaySpeed: 3000,
         centerPadding: 0,
         centerMode: false,
         variableWidth: true,
         arrows: false,
-
     };
 
     return (
@@ -57,11 +58,9 @@ const ICars = () => {
                         </p>
                     </div>
                 </div>
-
                 <div className="video-content">
                     <div></div>
                 </div>
-
             </div>
             <p className="video-info-text">Our team utilized NodeJS and Python to create a custom website that perfectly captures the essence of icars identity and leadership in their industry. The design elements were carefully crafted to align with the brand's values and
                 set them apart from the competition.</p>
@@ -77,17 +76,20 @@ const ICars = () => {
                         <img src="/assets/images/car1.png" alt="car1"/>
                     </div>
                     <div className="car-content-item">
-                        <img src="/assets/images/car1.png" alt="car1"/>
+                        <img src="/assets/images/car2.png" alt="car1"/>
                     </div>
+                    {/*<div className="car-content-item">*/}
+                    {/*    <img src="/assets/images/car3.png" alt="car1"/>*/}
+                    {/*</div>*/}
                     <div className="car-content-item">
                         <img src="/assets/images/car1.png" alt="car1"/>
                     </div>
                     <div className="car-content-item">
-                        <img src="/assets/images/car1.png" alt="car1"/>
+                        <img src="/assets/images/car2.png" alt="car1"/>
                     </div>
-                    <div className="car-content-item">
-                        <img src="/assets/images/car1.png" alt="car1"/>
-                    </div>
+                    {/*<div className="car-content-item">*/}
+                    {/*    <img src="/assets/images/car3.png" alt="car1"/>*/}
+                    {/*</div>*/}
                 </Slider>
             </div>
             <div className="container">
