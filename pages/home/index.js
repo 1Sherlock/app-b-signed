@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import FormComponent from "../../components/FormComponent";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import Link from "next/link";
 
 function Index(props) {
     useEffect(() => {
@@ -79,7 +80,9 @@ function Index(props) {
                         </div>
                     </div>
                 </div>
-                <button className={'font-montserrat-bold'}>Get Started</button>
+                <button className={'font-montserrat-bold'}>
+                    <Link href={'#js-target'}>Get Started</Link>
+                </button>
             </section>
 
             <section className="section-three">
@@ -148,7 +151,9 @@ function Index(props) {
                 <div className="commit-text font-poppins-regular">
                     The whole operational part from our behalf is colculated to be completed in 2-3 weeks.
                 </div>
-                <button className={'font-montserrat-bold'}>Get Started</button>
+                <button className={'font-montserrat-bold'}>
+                    <Link href={'#js-target'}>Get Started</Link>
+                </button>
             </section>
 
             <section className="partner-section">
@@ -173,7 +178,7 @@ function Index(props) {
                 <video muted autoPlay loop playsInline>
                     <source src="/assets/video/home.mp4" type="video/mp4"/>
                 </video>
-                <button className={'font-montserrat-bold'}>Get Started</button>
+                <button className={'font-montserrat-bold'}><Link href={'#js-target'}>Get Started</Link></button>
             </section>
 
             <section className="form-section" id="js-target">

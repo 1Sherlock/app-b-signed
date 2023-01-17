@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import FormComponent from "../../components/FormComponent";
 import Footer from "../../components/Footer";
 import AppHeader from "../../components/AppHeader";
+import Link from "next/link";
 
 function Index(props) {
     useEffect(() => {
@@ -70,7 +71,9 @@ function Index(props) {
                         </div>
                     </div>
                 </div>
-                <button className={'font-montserrat-bold'}>Place an order</button>
+                <button className={'font-montserrat-bold'}>
+                    <Link href={'#js-target'}>Place an order</Link>
+                </button>
             </div>
             <div className="section-two">
                 <h1 className={'font-montserrat-extra-bold'}>
