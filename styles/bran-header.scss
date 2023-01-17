@@ -3,10 +3,13 @@
   width: 100%;
 
   .brand-page-main-header-content{
-    padding-top: 100px;
+    height: calc(100vh - 122px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .brand-page-main-header-content-img{
       text-align: center;
-      width: 845px;
+      width: 945px;
       max-width: 100%;
       margin: 0 auto;
       img{

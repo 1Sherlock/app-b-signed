@@ -16,7 +16,7 @@ const AppHeader = () => {
                 <div className="web-page-main-header-content-left">
                     <h3 className="font-neue-machina-regular">Expertly developed apps for your business</h3>
                 </div>
-                <img src="/assets/images/app-header.png" alt="web-header"/>
+                <img src="/assets/images/app-header.png" alt="web-header" className="web-page-header-img"/>
                 {/*<div className="web-page-main-header-content-left"></div>*/}
                 <h3 className="font-neue-machina-regular text-mobile">Expertly developed apps for your business</h3>
                 <button type="button" className="font-montserrat-bold">Place an order</button>

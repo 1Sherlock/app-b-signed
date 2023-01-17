@@ -5,11 +5,23 @@ import Header from "../../components/Header";
 
 function Index(props) {
     useEffect(() => {
-        document.getElementById("tap-to").style.display = "block"
+        document.getElementById("tap-to").style.display = "block";
+
+        window.addEventListener('scroll', changeScroll)
         return () => {
+            window.removeEventListener("scroll", changeScroll)
             document.getElementById("tap-to").style.display = "none"
         }
-    }, [])
+    }, []);
+
+    const changeScroll = () => {
+            const scrollpos = window.scrollY;
+            if (scrollpos >= 100) {
+                document.getElementById("tap-to").classList.add("scrolled")
+            } else {
+                document.getElementById("tap-to").classList.remove("scrolled")
+            }
+    }
     return (
         <div className="home-page" data-scroll-section>
             <Header/>

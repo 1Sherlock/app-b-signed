@@ -56,9 +56,11 @@ const Header = () => {
                                 </p>
                             </div>
                         </Slider>
-                        <h3 className="h3-margin font-neue-machina-ultra-bold">{time}</h3>
-                        <h3 className="font-neue-machina-ultra-bold">{date}</h3>
-                        <div className="line"/>
+                        <div className="time-content">
+                            <h3 className="h3-margin font-neue-machina-ultra-bold">{time}</h3>
+                            <h3 className="font-neue-machina-ultra-bold">{date}</h3>
+                            <div className="line"/>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,18 +1,15 @@
 import React from 'react';
 import Link from "next/link";
-import { useLocomotiveScroll } from 'react-locomotive-scroll';
+// import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 const Navbar = () => {
-    const { scroll } = useLocomotiveScroll();
+    // const { scroll } = useLocomotiveScroll();
 
-    const toContact = () => {
-        const target = document.querySelector('#js-target');
-
-        scroll.scrollTo(target);
-        scroll.on("scroll", (args) => {
-            console.log("keldi")
-        })
-    }
+    // const toContact = () => {
+    //     const target = document.querySelector('#js-target');
+    //
+    //     scroll.scrollTo(target);
+    // }
     return (
         <>
             <div className="main-header-nav">
@@ -24,7 +21,7 @@ const Navbar = () => {
                     <li><Link href="/web" className="font-inter-regular">Web Development</Link></li>
                     <li><Link href="/app" className="font-inter-regular">App Development</Link></li>
                     <li><Link href="/brand" className="font-inter-regular">Branding</Link></li>
-                    <li><Link href="#" className="font-inter-regular" onClick={toContact}>Contact Us</Link></li>
+                    <li><Link href="#js-target" className="font-inter-regular">Contact Us</Link></li>
                 </ul>
                 <a href="tel:+15043335601"><img src="/assets/icons/telephone.svg" alt="telephone"/></a>
             </div>
@@ -32,7 +29,7 @@ const Navbar = () => {
                <Link href="/web" className="font-inter-regular">Web Development</Link>
                <Link href="/app" className="font-inter-regular">App Development</Link>
                <Link href="/brand" className="font-inter-regular">Branding</Link>
-               <Link href="#" className="font-inter-regular" onClick={toContact}>Contact Us</Link>
+               <Link href="#js-target" className="font-inter-regular">Contact Us</Link>
             </div>
         </>
     );

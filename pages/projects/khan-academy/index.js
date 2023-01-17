@@ -1,16 +1,51 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Navbar from "../../../components/Navbar";
 import Link from "next/link";
 import FormComponent from "../../../components/FormComponent";
 import Footer from "../../../components/Footer";
+import Slider from "react-slick";
+import {randomIntFromInterval} from "../../../tools";
 
 const Khan = () => {
+    const [number, setNumber] = useState(randomIntFromInterval(0, 2));
+
     useEffect(() => {
         document.getElementById("scroll-element").style.display = "block"
         return () => {
             document.getElementById("scroll-element").style.display = "none"
         }
     }, [])
+
+    const settings = {
+        // className: "slider variable-width",
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 3,
+        autoPlay: true,
+        autoplaySpeed: 3000,
+        centerPadding: 0,
+        centerMode: false,
+        variableWidth: true,
+        arrows: false,
+    };
+
+    const projects = [
+        {
+            img: "/assets/images/social.png",
+            link: "/projects/social"
+        },
+        {
+            img: "/assets/images/pepsi.png",
+            link: "/projects/pepsi"
+        },
+        {
+            img: "/assets/images/icar.png",
+            link: "/projects/i-cars"
+        }
+    ]
+
     return (
         <div className="projects-page khan" data-scroll-section>
             <header>
@@ -55,14 +90,33 @@ const Khan = () => {
             </p>
 
             <div className="container">
-                <h5 className="carousel-text font-montserrat-bold">
-                    MOBILE VIEW
-                </h5>
-            </div>
-            <div className="car-content">
-                <img src="/assets/images/khan-car1.png" alt="car1"/>
-                <img src="/assets/images/khan-car2.png" alt="car1"/>
-                <img src="/assets/images/khan-car3.png" alt="car1"/>
+                <div className="carousel-content-wrap">
+                    <h5 className="carousel-text font-montserrat-bold">
+                        MOBILE VIEW
+                    </h5>
+                    <div className="car-content">
+                        <Slider {...settings}>
+                            <div className="car-content-item">
+                                <img src="/assets/images/khan-car1.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/khan-car2.png" alt="car1"/>
+                            </div>
+                            {/*<div className="car-content-item">*/}
+                            {/*    <img src="/assets/images/car3.png" alt="car1"/>*/}
+                            {/*</div>*/}
+                            <div className="car-content-item">
+                                <img src="/assets/images/khan-car1.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/khan-car2.png" alt="car1"/>
+                            </div>
+                            {/*<div className="car-content-item">*/}
+                            {/*    <img src="/assets/images/car3.png" alt="car1"/>*/}
+                            {/*</div>*/}
+                        </Slider>
+                    </div>
+                </div>
             </div>
             <div className="container">
                 <div className="info-text-content">
@@ -73,8 +127,11 @@ const Khan = () => {
                 </div>
                 <h4 className="more-text">More Projects</h4>
                 <div className="project-content">
-                    <Link href="/projects/khan-academy"><img src="/assets/images/khan.png" alt="khan"/></Link>
-                    <Link href="/projects/i-cars"><img src="/assets/images/icar.png" alt="social"/></Link>
+                    {projects.map((item, index) => {
+                        return index != number ?
+                            <Link href={item.link}><img src={item.img} alt="khan"/></Link>
+                            : ""
+                    })}
                 </div>
             </div>
             <div className="form-section" id="js-target">

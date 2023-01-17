@@ -26,8 +26,10 @@
       width: 611px;
       max-width: 100%;
 
-      &.web-page-header-img{
-        width: 32vw;
+      @media (min-width: 1500px){
+        &.web-page-header-img{
+          width: 900px;
+        }
       }
     }
     button{
@@ -37,13 +39,13 @@
   .text-mobile{
     display: none;
   }
-  &.app{
-    .web-page-main-header-content{
-      .web-page-main-header-content-left{
-        top: 135px;
-      }
-    }
-  }
+  //&.app{
+  //  .web-page-main-header-content{
+  //    .web-page-main-header-content-left{
+  //      top: 135px;
+  //    }
+  //  }
+  //}
 
   @media (max-width: 1200px){
     .web-page-main-header-content{

@@ -4,9 +4,9 @@ function Footer(props) {
     return (
         <div className="footer-section">
             <div className="footer-section-left-side">
-                <a href="#" className="brand">
+                <Link href="/home" className="brand">
                     <img src="/assets/icons/logo-footer.svg" alt=""/>
-                </a>
+                </Link>
                 <p className="text font-poppins-regular desktop-footer-text">C 2023 All Rights reserved
                     Be Signed  LLC</p>
             </div>
@@ -22,7 +22,7 @@ function Footer(props) {
                         </ul>
                     </div>
                     <div className="nav">
-                        <b className={'font-montserrat-extra-bold'}>Conatcts</b>
+                        <b className={'font-montserrat-extra-bold'}>Contacts</b>
                         <ul>
                             <li><a className={'font-poppins-regular'} href="#">
                                 <img src="/assets/icons/phone.svg" alt=""/>
@@ -32,7 +32,7 @@ function Footer(props) {
                                 <span>@besigned.us</span></a></li>
                             <li><a className={'font-poppins-regular'} href="mailto:vasimlaban@bsigned.us">
                                 <img src="/assets/icons/email.svg" alt=""/>
-                                <span>costumer@besigned.us</span></a></li>
+                                <span>vasimlaban@bsigned.us</span></a></li>
                         </ul>
                     </div>
                 </div>

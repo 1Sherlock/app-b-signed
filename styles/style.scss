@@ -420,8 +420,8 @@ footer {
     a {
       font-style: normal;
       font-weight: 400;
-      font-size: 30px;
-      line-height: 48px;
+      font-size: 26px;
+      line-height: 38px;
       color: #FFFFFF;
       text-decoration: none;
       display: flex;
@@ -531,15 +531,42 @@ footer {
 
     .carousel-text {
       padding-top: 168px;
-    }
-
-    .text {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 28px;
-      line-height: 62px;
-      color: #FFFFFF;
       width: 575px;
+      max-width: 90%;
+      p{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 62px;
+        color: #FFFFFF;
+      }
+      .slick-dots{
+        top: -40px;
+        bottom: unset;
+        text-align: right;
+        li{
+          margin: 0;
+          width: unset;
+          height: unset;
+          button{
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: rgba(90, 194, 238, 0.44);
+            transition: all 0.2s linear;
+            margin-right: 8px;
+
+            &:before{
+              content: none;
+            }
+          }
+          &.slick-active{
+            button{
+              background: rgba(236, 248, 97, 0.8);
+            }
+          }
+        }
+      }
     }
   }
 
@@ -1027,7 +1054,7 @@ footer {
       }
 
       .form {
-        width: 337px;
+        width: 100%;
         height: auto;
         margin-top: 0;
 
@@ -1042,7 +1069,7 @@ footer {
       form {
 
         border-radius: 10px;
-        width: 337px;
+        width: 100%;
         height: auto;
         padding: 23px 0 0 0;
       }

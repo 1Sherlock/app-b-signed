@@ -165,12 +165,24 @@
     color: #FFFFFF;
     margin: 0 0 1px;
   }
+  .carousel-content-wrap{
+    display: flex;
+    h5{
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+    @media (max-width: 576px){
+      flex-direction: column;
+    }
+  }
   .car-content{
+    margin-top: 40px;
+    width: 100%;
     //display: flex;
     //justify-content: flex-end;
     //flex-wrap: wrap;
     img{
-      width: 485px;
+      width: 425px;
       margin-right: 70px;
     }
     @media (max-width: 1750px){
@@ -186,8 +198,10 @@
     }
   }
   .info-text-content{
-    margin-top: 382px;
-    margin-bottom: 509px;
+    height: 103vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     h2{
       font-weight: 800;
       font-size: 36px;
@@ -245,7 +259,7 @@
     justify-content: center;
     margin-bottom: 500px;
     a{
-      width: calc(40% - 45px);
+      width: calc(35% - 45px);
       display: block;
       &:nth-child(1){
         margin-right: 90px;

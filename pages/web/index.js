@@ -1,18 +1,38 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import FormComponent from "../../components/FormComponent";
 import Footer from "../../components/Footer";
 import Slider from "react-slick";
 import WebHeader from "../../components/WebHeader";
 
 function Index(props) {
+    useEffect(() => {
+        document.getElementById("tap-to").style.display = "block";
+
+        window.addEventListener('scroll', changeScroll)
+        return () => {
+            window.removeEventListener("scroll", changeScroll)
+            document.getElementById("tap-to").style.display = "none"
+        }
+    }, []);
+
     const settings = {
         dots: true,
-        arrows: false,
+        arrows:false,
         infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
     };
+    const changeScroll = () => {
+        const scrollpos = window.scrollY;
+        if (scrollpos >= 100) {
+            document.getElementById("tap-to").classList.add("scrolled")
+        } else {
+            document.getElementById("tap-to").classList.remove("scrolled")
+        }
+    }
     return (
         <div className='web-page' data-scroll-section>
             <WebHeader/>
@@ -106,35 +126,33 @@ function Index(props) {
                 <div className="carousel-item">
                     <img src="/assets/carousel/carousel-img.png" alt=""/>
                 </div>
-
-                    <div className="carousel-text">
-                        <div className="text font-poppins-regular">
-                            1. Our design solutions are not only visually stunning,
-                            but they are also strategically crafted to
-                            elevate your brand and drive your business objectives forward
+                <div className="carousel-text">
+                    <Slider {...settings}>
+                        <div className="header-carousel-item">
+                            <p className="font-poppins-regular">
+                                Our design solutions are not only visually stunning,
+                                but they are also strategically crafted to
+                                elevate your brand and drive your business objectives forward                            </p>
                         </div>
-                    </div>
-                 {/*   <div className="carousel-text">
-                        <div className="text  font-poppins-regular">
-                            2. Our unique brand identity solutions will truly capture the
-                            essence of your company and set you apart
-                            in the market
+                        <div className="header-carousel-item">
+                            <p className="font-poppins-regular">
+                                Our unique brand identity solutions will truly capture the
+                                essence of your company and set you apart
+                                in the market                            </p>
                         </div>
-                    </div>
-                    <div className="carousel-text">
-                        <div className="text font-poppins-regular">
-                            3. Complete and comprehensive brand identity solutions
-                            that take the burden off your shoulders.
+                        <div className="header-carousel-item">
+                            <p className="font-poppins-regular">
+                                Complete and comprehensive brand identity solutions
+                                that take the burden off your shoulders.                            </p>
                         </div>
-                    </div>
-                    <div className="carousel-text">
-                        <div className="text font-poppins-regular">
-                            4. Running a business is a round-the-clock endeavor, that's why
-                            we offer 24/7 technical support and
-                            provide reliable servers to ensure that you have the tools you need to succeed
+                        <div className="header-carousel-item">
+                            <p className="font-poppins-regular">
+                                Running a business is a round-the-clock endeavor, that's why
+                                we offer 24/7 technical support and
+                                provide reliable servers to ensure that you have the tools you need to succeed                        </p>
                         </div>
-                    </div>*/}
-
+                    </Slider>
+                </div>
             </div>
 
 

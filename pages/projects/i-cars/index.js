@@ -1,13 +1,16 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Navbar from "../../../components/Navbar";
 import Link from "next/link";
 import FormComponent from "../../../components/FormComponent";
 import Footer from "../../../components/Footer";
 import Slider from "react-slick";
+import {randomIntFromInterval} from "../../../tools";
 
 const ICars = () => {
+    const [number, setNumber] = useState(randomIntFromInterval(0, 2));
+
     useEffect(() => {
-        document.getElementById("scroll-element").style.display = "block"
+        document.getElementById("scroll-element").style.display = "block";
         return () => {
             document.getElementById("scroll-element").style.display = "none"
         }
@@ -19,7 +22,7 @@ const ICars = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         autoPlay: true,
         autoplaySpeed: 3000,
         centerPadding: 0,
@@ -27,6 +30,21 @@ const ICars = () => {
         variableWidth: true,
         arrows: false,
     };
+
+    const projects = [
+        {
+            img: "/assets/images/khan.png",
+            link: "/projects/khan-academy"
+        },
+        {
+            img: "/assets/images/social.png",
+            link: "/projects/social"
+        },
+        {
+            img: "/assets/images/pepsi.png",
+            link: "/projects/pepsi"
+        }
+    ]
 
     return (
         <div className="projects-page" data-scroll-section>
@@ -66,31 +84,34 @@ const ICars = () => {
                 set them apart from the competition.</p>
 
             <div className="container">
-                <h5 className="carousel-text font-montserrat-bold">
-                    MOBILE VIEW
-                </h5>
-            </div>
-            <div className="car-content">
-                <Slider {...settings}>
-                    <div className="car-content-item">
-                        <img src="/assets/images/car1.png" alt="car1"/>
+                <div className="carousel-content-wrap">
+                    <h5 className="carousel-text font-montserrat-bold">
+                        MOBILE VIEW
+                    </h5>
+                    <div className="car-content">
+                        <Slider {...settings}>
+                            <div className="car-content-item">
+                                <img src="/assets/images/car1.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/car2.png" alt="car1"/>
+                            </div>
+                            {/*<div className="car-content-item">*/}
+                            {/*    <img src="/assets/images/car3.png" alt="car1"/>*/}
+                            {/*</div>*/}
+                            <div className="car-content-item">
+                                <img src="/assets/images/car1.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/car2.png" alt="car1"/>
+                            </div>
+                            {/*<div className="car-content-item">*/}
+                            {/*    <img src="/assets/images/car3.png" alt="car1"/>*/}
+                            {/*</div>*/}
+                        </Slider>
                     </div>
-                    <div className="car-content-item">
-                        <img src="/assets/images/car2.png" alt="car1"/>
-                    </div>
-                    {/*<div className="car-content-item">*/}
-                    {/*    <img src="/assets/images/car3.png" alt="car1"/>*/}
-                    {/*</div>*/}
-                    <div className="car-content-item">
-                        <img src="/assets/images/car1.png" alt="car1"/>
-                    </div>
-                    <div className="car-content-item">
-                        <img src="/assets/images/car2.png" alt="car1"/>
-                    </div>
-                    {/*<div className="car-content-item">*/}
-                    {/*    <img src="/assets/images/car3.png" alt="car1"/>*/}
-                    {/*</div>*/}
-                </Slider>
+                </div>
+
             </div>
             <div className="container">
                 <div className="info-text-content">
@@ -99,8 +120,11 @@ const ICars = () => {
                 </div>
                 <h4 className="more-text">More Projects</h4>
                 <div className="project-content">
-                    <Link href="/projects/khan-academy"><img src="/assets/images/khan.png" alt="khan"/></Link>
-                    <Link href="/projects/social"><img src="/assets/images/social.png" alt="social"/></Link>
+                    {projects.map((item, index) => {
+                        return index != number ?
+                            <Link href={item.link}><img src={item.img} alt="khan"/></Link>
+                            : ""
+                    })}
                 </div>
             </div>
             <div className="form-section" id="js-target">
