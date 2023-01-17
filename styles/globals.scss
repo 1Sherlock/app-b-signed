@@ -87,8 +87,8 @@ html {
 
   &.scrolled{
     right: 30px;
-    width: 100px;
-    height: 100px;
+    //width: 100px;
+    //height: 100px;
     left: calc(100% - 207px);
     animation-name: anim-title;
     animation-duration: 10s;
