@@ -3,6 +3,8 @@ import FormComponent from "../../components/FormComponent";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Link from "next/link";
+import Modal from "../../components/Modal";
+import Example from "../../components/Example";
 
 function Index(props) {
     useEffect(() => {
@@ -188,6 +190,8 @@ function Index(props) {
             <footer>
                 <Footer/>
             </footer>
+            <Example/>
+
         </div>
     );
 }
