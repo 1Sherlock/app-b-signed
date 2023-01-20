@@ -1,48 +1,46 @@
 import React, { Component } from "react";
 import VerticalCarousel from "./VerticalCarousel";
-import { config } from "react-spring";
 
 let slides = [
     {
         key: 1,
-        content: "1"
+        content: "i-cars.png"
     },
     {
         key: 2,
-        content: "2"
+        content: "khan.png"
     },
     {
         key: 3,
-        content: "3"
+        content: "pepsi.png"
     },
     {
         key: 4,
-        content: "4"
+        content: "slide.png"
     },
     {
         key: 5,
-        content: "5"
+        content: "i-cars.png"
     },
     {
         key: 6,
-        content: "6"
+        content: "khan.png"
     },
     {
         key: 7,
-        content: "7"
+        content: "pepsi.png"
     },
     {
         key: 8,
-        content: "8"
-    }
+        content: "slide.png"
+    },
 ];
 
 export default class Example extends Component {
     state = {
         goToSlide: 0,
         offsetRadius: 2,
-        showNavigation: true,
-        config: config.gentle
+        showNavigation: false,
     };
 
     // onChangeInput = e => {
@@ -58,17 +56,18 @@ export default class Example extends Component {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
-                    width: "100vw",
-                    height: "100vh",
-                    margin: "0 auto",
-                    background: "#7FfFbF"
+                    // width: "100vw",
+                    // height: "100vh",
+                    // margin: "0 auto",
+                    width: "510px",
+                    height: "600px",
+                    // background: "#7FfFbF"
                 }}
             >
                 <VerticalCarousel
                     slides={slides}
                     offsetRadius={this.state.offsetRadius}
                     showNavigation={this.state.showNavigation}
-                    animationConfig={this.state.config}
                 />
             </div>
         );

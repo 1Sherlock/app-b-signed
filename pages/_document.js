@@ -25,33 +25,7 @@ export default function Document() {
             <div className="scroll-down-item" id="scroll-element">
                 <img src="/assets/images/scroll-down.png" alt="scroll"/>
             </div>
-            <div className="layer-scroll-component" id="tap-to">
-                <img src="/assets/images/to-to-see.png" alt="tap-to-see"/>
-            </div>
             </body>
-
-            <Modal isOpen={false}>
-                <div className="project-layer">
-                    <h2 className="font-neue-machina-regular">Our works</h2>
-                    <div className="project-layer-content">
-                        <div>
-                            <h3 className="font-montserrat-extra-bold">Icars. <br/>
-                                Car retail service</h3>
-                            <div className="project-layer-content-info">
-                                <h4 className="font-montserrat-bold">Authentic Brand <br/>
-                                    Engagement</h4>
-                                <h5 className="font-montserrat-bold">
-                                    AN ORIGINAL PROJECT FOR ICARS
-                                </h5>
-                            </div>
-                        </div>
-                        <div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </Modal>
         </Html>
     )
 }

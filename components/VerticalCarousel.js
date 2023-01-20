@@ -14,7 +14,6 @@ const Wrapper = styled.div`
 const NavigationButtons = styled.div`
   position: relative;
   display: flex;
-
   height: 60px;
   margin: 0 auto;
   width: 20%;
@@ -66,12 +65,10 @@ class VerticalCarousel extends React.Component {
         goToSlide: PropTypes.number,
         showNavigation: PropTypes.bool,
         offsetRadius: PropTypes.number,
-        animationConfig: PropTypes.object
     };
 
     static defaultProps = {
         offsetRadius: 2,
-        animationConfig: { tension: 120, friction: 14 }
     };
 
     modBySlidesLength = index => {
@@ -114,7 +111,7 @@ class VerticalCarousel extends React.Component {
     }
 
     render() {
-        const { animationConfig, offsetRadius, showNavigation } = this.props;
+        const { offsetRadius, showNavigation } = this.props;
 
         let navigationButtons = null;
         if (showNavigation) {
@@ -135,7 +132,6 @@ class VerticalCarousel extends React.Component {
                             moveSlide={this.moveSlide}
                             offsetRadius={this.clampOffsetRadius(offsetRadius)}
                             index={presentableIndex}
-                            animationConfig={animationConfig}
                         />
                     ))}
                 </Wrapper>

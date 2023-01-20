@@ -286,6 +286,8 @@ html {
     margin-top: 0;
   }
   .project-layer-content{
+    display: flex;
+    //justify-content: space-between;
     h3{
       font-weight: 800;
       font-size: 40px;

@@ -16,9 +16,9 @@ const SlideCard = styled.div`
   position: relative;
   max-width: 50%;
   min-width: 30%;
-  width: 100vw;
+  // width: 100vw;
   height: 100%;
-  background: white;
+  // background: white;
   font-size: 35px;
   display: flex;
   align-items: center;
@@ -30,7 +30,6 @@ function Slide({
                    content,
                    offsetRadius,
                    index,
-                   animationConfig,
                    moveSlide,
                    delta,
                    down,
@@ -83,7 +82,7 @@ function Slide({
             }}
         >
             <SlideCard onClick={() => moveSlide(offsetFromMiddle)}>
-                {content}
+                <img src={"/assets/images/layer/" + content} alt={content}/>
             </SlideCard>
         </SlideContainer>
     );

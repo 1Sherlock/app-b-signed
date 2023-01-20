@@ -5,15 +5,16 @@ import Header from "../../components/Header";
 import Link from "next/link";
 import Modal from "../../components/Modal";
 import Example from "../../components/Example";
+import Layer from "../../components/Layer";
 
 function Index(props) {
     useEffect(() => {
-        document.getElementById("tap-to").style.display = "block";
+        // document.getElementById("tap-to").style.display = "block";
 
         window.addEventListener('scroll', changeScroll)
         return () => {
             window.removeEventListener("scroll", changeScroll)
-            document.getElementById("tap-to").style.display = "none"
+            // document.getElementById("tap-to").style.display = "none"
         }
     }, []);
 
@@ -26,7 +27,7 @@ function Index(props) {
             }
     }
     return (
-        <div className="home-page" data-scroll-section>
+        <div className="home-page">
             <Header/>
             <section className="section-one">
                 <h1 className='font-montserrat-extra-bold'>Transform your
@@ -190,8 +191,10 @@ function Index(props) {
             <footer>
                 <Footer/>
             </footer>
-            <Example/>
-
+            <div className="layer-scroll-component" id="tap-to">
+                <img src="/assets/images/to-to-see.png" alt="tap-to-see"/>
+            </div>
+            <Layer/>
         </div>
     );
 }
