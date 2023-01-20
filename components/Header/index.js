@@ -32,7 +32,7 @@ const Header = () => {
             <div className="main-header-content">
                 <div className="main-header-content-left">
                     <h1 className="font-neue-machina-regular">You Desire</h1>
-                    <h1 className="font-neue-machina-regular">We design</h1>
+                    <h1 className="font-neue-machina-regular">We Design</h1>
                 </div>
                 <video autoPlay muted loop playsInline>
                     <source src="/assets/video/shart.mp4" type="video/mp4"/>
