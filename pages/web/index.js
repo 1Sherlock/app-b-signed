@@ -171,7 +171,7 @@ function Index(props) {
                             We guarantee the quality regardless of complexity of the project
                         </div>
                         <img src="/assets/home/img2.png" alt=""/>
-                        <img className='new-box-img' src="/assets/home/img2.png" alt=""/>
+                        {/*<img className='new-box-img' src="/assets/home/img2.png" alt=""/>*/}
                     </div>
                 </div>
             </div>
