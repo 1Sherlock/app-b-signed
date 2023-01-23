@@ -1,34 +1,73 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import FormComponent from "../../components/FormComponent";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Link from "next/link";
+import Modal from "../../components/Modal";
+import Example from "../../components/Example";
+import Layer from "../../components/Layer";
 
 function Index(props) {
-    useEffect(() => {
-        document.getElementById("tap-to").style.display = "block";
+    const [isOpen, setIsOpen] = useState(false);
 
-        window.addEventListener('scroll', changeScroll)
+    useEffect(() => {
+        window.addEventListener('scroll', changeScroll);
         return () => {
             window.removeEventListener("scroll", changeScroll)
-            document.getElementById("tap-to").style.display = "none"
         }
     }, []);
 
     const changeScroll = () => {
-            const scrollpos = window.scrollY;
-            if (scrollpos >= 100) {
-                document.getElementById("tap-to").classList.add("scrolled")
-            } else {
-                document.getElementById("tap-to").classList.remove("scrolled")
+        const scrollpos = window.scrollY;
+
+        if (scrollpos >= 100) {
+            document.getElementById("tap-to").classList.add("scrolled")
+        } else {
+            document.getElementById("tap-to").classList.remove("scrolled")
+        }
+        const elements = document.getElementsByClassName("scroll-section-animation");
+        for (let i = 0; i < elements.length; i++) {
+            if (elements[i].getBoundingClientRect().top <= 0){
+                console.log(elements[i].getBoundingClientRect())
+                const items = document.getElementsByClassName("scroll-section-animation-item");
+                for (let j = 0; j < items.length; j++) {
+                    const transform = elements[i].getBoundingClientRect().top / elements[i].getBoundingClientRect().height * 100
+                    items[i].style.willChange = "transform";
+                    items[i].style.transform = "translate3d(0px, "+ transform +"%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)";
+                    items[i].style.transformStyle = "preserve-3d";
+                }
             }
+        }
+
     }
+    console.log(props)
     return (
-        <div className="home-page" data-scroll-section>
+        <div className="home-page">
             <Header/>
-            <section className="section-one">
-                <h1 className='font-montserrat-extra-bold'>Transform your
-                    business with us</h1>
+            {/*<section className="section-one">*/}
+            {/*    <div className="section-one-content">*/}
+            {/*        <div className="section-one-content-wrap">*/}
+            {/*            <h1 className='font-montserrat-extra-bold'>Transform your*/}
+            {/*                business with us</h1>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
+            <section style={{position: "relative", zIndex: 0}} id="" className="scroll-section-animation">
+                <div className="nimadir">
+                    <div className="text-effect-sticky-element">
+                        <div className="gutter-outside container-w3">
+                            <div className="text-effect-inner">
+                                <div className="text-effect-gradient scroll-section-animation-item">
+                                    <div className="text-overlap-end"></div>
+                                </div>
+                                <p className="text-effect-text">
+                                    Transform your
+                                    business with us
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section className="section-two">
@@ -85,10 +124,27 @@ function Index(props) {
                 </button>
             </section>
 
-            <section className="section-three">
-                <h1 className={'font-montserrat-extra-bold'}>Our formula
-                    for your success</h1>
+            <section style={{position: "relative", zIndex: 0}} id="" className="scroll-section-animation">
+                <div className="nimadir">
+                    <div className="text-effect-sticky-element">
+                        <div className="gutter-outside container-w3">
+                            <div className="text-effect-inner">
+                                <div className="text-effect-gradient scroll-section-animation-item">
+                                    <div className="text-overlap-end"></div>
+                                </div>
+                                <p className="text-effect-text">
+                                    Our formula
+                                    for your success
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
+            {/*<section className="section-three">*/}
+            {/*    <h1 className={'font-montserrat-extra-bold'}>Our formula*/}
+            {/*        for your success</h1>*/}
+            {/*</section>*/}
 
             <section className="section-four">
                 <div className="absolute-left"/>
@@ -188,7 +244,14 @@ function Index(props) {
             <footer>
                 <Footer/>
             </footer>
+            <div className="layer-scroll-component" id="tap-to" onClick={() => setIsOpen(true)}>
+                <img src="/assets/images/to-to-see.png" alt="tap-to-see"/>
+            </div>
+            <Layer isOpen={isOpen} toggle={() => {
+                setIsOpen(!isOpen)
+            }}/>
         </div>
     );
 }
+
 export default Index;

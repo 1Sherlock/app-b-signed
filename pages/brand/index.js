@@ -1,17 +1,18 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import FormComponent from "../../components/FormComponent";
 import Footer from "../../components/Footer";
 import Link from "next/link";
 import BranHeader from "../../components/BranHeader";
+import Layer from "../../components/Layer";
 
 function Index(props) {
+    const [isOpen, setIsOpen] = useState(false);
+
     useEffect(() => {
-        document.getElementById("tap-to").style.display = "block";
 
         window.addEventListener('scroll', changeScroll)
         return () => {
             window.removeEventListener("scroll", changeScroll)
-            document.getElementById("tap-to").style.display = "none"
         }
     }, []);
     const changeScroll = () => {
@@ -21,16 +22,47 @@ function Index(props) {
         } else {
             document.getElementById("tap-to").classList.remove("scrolled")
         }
+
+        const elements = document.getElementsByClassName("scroll-section-animation");
+        for (let i = 0; i < elements.length; i++) {
+            if (elements[i].getBoundingClientRect().top <= 0){
+                console.log(elements[i].getBoundingClientRect())
+                const items = document.getElementsByClassName("scroll-section-animation-item");
+                for (let j = 0; j < items.length; j++) {
+                    const transform = elements[i].getBoundingClientRect().top / elements[i].getBoundingClientRect().height * 100
+                    items[i].style.willChange = "transform";
+                    items[i].style.transform = "translate3d(0px, "+ transform +"%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)";
+                    items[i].style.transformStyle = "preserve-3d";
+                }
+            }
+        }
     }
     return (
         <div className='brand-page' data-scroll-section>
             <BranHeader/>
-            <div className="section-one">
-                <h1 className="font-montserrat-extra-bold">
-                    Experience the transformative power
-                    of our brand strategy and design thinking services
-                </h1>
-            </div>
+            <section style={{position: "relative", zIndex: 0}} id="" className="scroll-section-animation">
+                <div className="nimadir brand">
+                    <div className="text-effect-sticky-element">
+                        <div className="gutter-outside container-w3">
+                            <div className="text-effect-inner">
+                                <div className="text-effect-gradient scroll-section-animation-item">
+                                    <div className="text-overlap-end"></div>
+                                </div>
+                                <p className="text-effect-text">
+                                    Experience the transformative power
+                                    of our brand strategy and design thinking services
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/*<div className="section-one">*/}
+            {/*    <h1 className="font-montserrat-extra-bold">*/}
+            {/*        Experience the transformative power*/}
+            {/*        of our brand strategy and design thinking services*/}
+            {/*    </h1>*/}
+            {/*</div>*/}
             <div className="section-two">
                 <div className="parent-box">
                     <div className="box">
@@ -120,17 +152,38 @@ function Index(props) {
                     </div>
                 </div>
             </section>
-            <div className="section-three">
-                <h1 className="font-montserrat-extra-bold">
-                    Ready to bring your big idea to life?
-                </h1>
-            </div>
+            <section style={{position: "relative", zIndex: 0}} id="" className="scroll-section-animation">
+                <div className="nimadir brand">
+                    <div className="text-effect-sticky-element">
+                        <div className="gutter-outside container-w3">
+                            <div className="text-effect-inner">
+                                <div className="text-effect-gradient scroll-section-animation-item">
+                                    <div className="text-overlap-end"></div>
+                                </div>
+                                <p className="text-effect-text">
+                                    Ready to bring your big idea to life?
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/*<div className="section-three">*/}
+            {/*    <h1 className="font-montserrat-extra-bold">*/}
+            {/*        Ready to bring your big idea to life?*/}
+            {/*    </h1>*/}
+            {/*</div>*/}
             <section className="form-section" id="js-target">
                 <FormComponent/>
             </section>
             <footer>
                 <Footer/>
             </footer>
+            <div className="layer-scroll-component" id="tap-to" onClick={() => setIsOpen(true)}>
+                <img src="/assets/images/to-to-see.png" alt="tap-to-see"/>
+            </div>
+            <Layer isOpen={isOpen} toggle={() => {setIsOpen(!isOpen)}}/>
         </div>
     );
 }
