@@ -4280,9 +4280,14 @@ footer {
 
 
     .section-three {
-      margin-top: 105px;
+      height:780px;
+      background-size: contain;
+      padding-top: 310px;
       .text-left, .text-right{
         font-size: 16px;
+      }
+      .box{
+        height: 410px;
       }
     }
   }
@@ -4352,7 +4357,7 @@ footer {
 
       .brand {
         margin-top: 50px;
-        margin-bottom: 34px;
+        margin-bottom: 100px;
         padding: 0 40px;
 
         img:nth-child(1) {
@@ -4374,20 +4379,23 @@ footer {
 
       .parent-box {
         display: flex;
-        flex-direction: column;
         width: auto;
         margin: 0 auto;
-        padding: 0 40px;
+        padding: 0;
+        justify-content: center;
 
         .box {
-          width: auto;
-          height: auto;
+          width: 450px;
+          height: 450px;
           margin-bottom: 22px;
 
           img {
             width: 100%;
             height: 100%;
           }
+        }
+        .box:last-child{
+          margin-left: 30px;
         }
       }
     }
