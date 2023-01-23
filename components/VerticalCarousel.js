@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "@emotion/styled";
 import Slide from "./Slide";
 import PropTypes from "prop-types";
+import { withRouter } from 'next/router'
 
 const Wrapper = styled.div`
   position: relative;
@@ -75,11 +76,16 @@ class VerticalCarousel extends React.Component {
         return mod(index, this.props.slides.length);
     };
 
-    moveSlide = direction => {
-        this.setState({
-            index: this.modBySlidesLength(this.state.index + direction),
-            goToSlide: null
-        });
+    moveSlide = (direction) => {
+        if (this.modBySlidesLength(this.state.index + direction) == this.props.selected){
+            this.props.router.push(this.props.selectedData[this.props.selected].link);
+        } else {
+            this.props.setSelected(this.modBySlidesLength(this.state.index + direction))
+            this.setState({
+                index: this.modBySlidesLength(this.state.index + direction),
+                goToSlide: null
+            });
+        }
     };
 
     clampOffsetRadius(offsetRadius) {
@@ -113,6 +119,8 @@ class VerticalCarousel extends React.Component {
     render() {
         const { offsetRadius, showNavigation } = this.props;
 
+        console.log(this.state.index)
+
         let navigationButtons = null;
         if (showNavigation) {
             navigationButtons = (
@@ -132,6 +140,8 @@ class VerticalCarousel extends React.Component {
                             moveSlide={this.moveSlide}
                             offsetRadius={this.clampOffsetRadius(offsetRadius)}
                             index={presentableIndex}
+                            selected={this.props.selected}
+                            setSelected={this.props.setSelected}
                         />
                     ))}
                 </Wrapper>
@@ -141,4 +151,4 @@ class VerticalCarousel extends React.Component {
     }
 }
 
-export default VerticalCarousel;
+export default  withRouter(VerticalCarousel);

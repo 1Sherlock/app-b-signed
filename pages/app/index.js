@@ -1,17 +1,18 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import FormComponent from "../../components/FormComponent";
 import Footer from "../../components/Footer";
 import AppHeader from "../../components/AppHeader";
 import Link from "next/link";
+import Layer from "../../components/Layer";
 
 function Index(props) {
+    const [isOpen, setIsOpen] = useState(false);
+
     useEffect(() => {
-        document.getElementById("tap-to").style.display = "block";
 
         window.addEventListener('scroll', changeScroll)
         return () => {
             window.removeEventListener("scroll", changeScroll)
-            document.getElementById("tap-to").style.display = "none"
         }
     }, []);
     const changeScroll = () => {
@@ -104,6 +105,10 @@ function Index(props) {
             <footer>
                 <Footer/>
             </footer>
+            <div className="layer-scroll-component" id="tap-to" onClick={() => setIsOpen(true)}>
+                <img src="/assets/images/to-to-see.png" alt="tap-to-see"/>
+            </div>
+            <Layer isOpen={isOpen} toggle={() => {setIsOpen(!isOpen)}}/>
         </div>
     );
 }

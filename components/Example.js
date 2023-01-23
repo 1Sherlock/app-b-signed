@@ -61,13 +61,18 @@ export default class Example extends Component {
                     // margin: "0 auto",
                     width: "510px",
                     height: "600px",
+                    maxWidth: "90%",
                     // background: "#7FfFbF"
                 }}
+                className="layer-mobile"
             >
                 <VerticalCarousel
                     slides={slides}
                     offsetRadius={this.state.offsetRadius}
                     showNavigation={this.state.showNavigation}
+                    selected={this.props.selected}
+                    setSelected={this.props.setSelected}
+                    selectedData={this.props.selectedData}
                 />
             </div>
         );

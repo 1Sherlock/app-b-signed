@@ -44,7 +44,7 @@ function Slide({
     };
 
     const translateYoffset =
-        50 * (Math.abs(offsetFromMiddle) / (offsetRadius + 1));
+        50 * (Math.abs(offsetFromMiddle) / (offsetRadius + 10));
     let translateY = -50;
 
     if (offsetRadius !== 0) {
@@ -82,7 +82,7 @@ function Slide({
             }}
         >
             <SlideCard onClick={() => moveSlide(offsetFromMiddle)}>
-                <img src={"/assets/images/layer/" + content} alt={content}/>
+                <img src={"/assets/images/layer/" + content} alt={content} className="layer-img"/>
             </SlideCard>
         </SlideContainer>
     );
