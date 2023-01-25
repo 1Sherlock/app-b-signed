@@ -28,6 +28,8 @@
 
     video{
       width: 50%;
+      position: relative;
+      z-index: 1;
     }
     .main-header-content-right-wrap{
       height: 100%;

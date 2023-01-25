@@ -74,6 +74,7 @@ html {
   margin: auto;
   bottom: 20px;
   cursor: pointer;
+  z-index: 1;
   img{
     width: 100%;
     height: 100%;
@@ -120,6 +121,7 @@ html {
     }
   }
   .logo-mobile{
+    width: 42px;
     @media (min-width: 577px){
       display: none;
     }
@@ -188,6 +190,7 @@ html {
     display: block;
     text-decoration: none;
     width: 100%;
+    padding: 0 5px;
   }
   @media (min-width: 880px){
     display: none;
