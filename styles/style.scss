@@ -1202,6 +1202,22 @@ footer {
         line-height: 20px;
       }
     }
+
+    .scroll-section-animation{
+      .text-effect-sticky-element {
+        .container-w3{
+          max-width: 250px;
+          padding: 0;
+
+          .text-effect-text{
+            font-size: 30px!important;
+            line-height: 132.9% !important;
+            width: 250px;
+          }
+        }
+      }
+
+    }
   }
 
   .form-section {
@@ -1429,7 +1445,7 @@ footer {
         padding-top: 50px;
       }
 
-      .text {
+      p {
         font-size: 15px;
         line-height: 34px;
         width: auto;
@@ -1480,6 +1496,23 @@ footer {
           margin-left: 12px;
         }
       }
+    }
+
+    .scroll-section-animation{
+      .text-effect-sticky-element {
+        .container-w3{
+          max-width: 280px;
+          padding: 0;
+
+          .text-effect-text{
+            font-size: 30px!important;
+            line-height: 132.9% !important;
+            width: 280px;
+            text-align: left!important;
+          }
+        }
+      }
+
     }
   }
 

@@ -11,6 +11,8 @@
     height: calc(100vh - 122px);
     .main-header-content-left{
       width: 28.5%;
+      position: relative;
+      z-index: 2;
       h1{
         font-weight: 400;
         font-size: 96px;
@@ -118,11 +120,15 @@
         h1{
           font-size: 30px;
           line-height: 29px;
-          transform: translate(91px, 110px);
+          transform: translate(41px, 60px);
+          &:nth-child(2){
+            margin-left: 85px;
+          }
         }
       }
       video{
         width: 100%;
+        margin-top: 35px;
       }
       .main-header-content-right-wrap{
         width: 220px;
