@@ -206,13 +206,15 @@ html {
   z-index: 99999;
   transition: all 0.3s linear;
   opacity: 0;
-  width: 100%;
-  max-width: 100%;
+  width: 1400px;
+  max-width: 90%;
   height: 0;
   overflow: hidden;
   max-height: 100%;
   overflow-y: auto;
   background: linear-gradient(46.32deg, #141414 12.55%, #141414 42.08%, #2C0E33 99.49%, #D14AF3 133.24%);
+  backdrop-filter: blur(25px);
+  box-shadow: 0px 0px 78px rgba(209, 74, 243, 0.45);
 
   &.modalXl{
     width: 1000px;
@@ -232,9 +234,10 @@ html {
 
   &.active {
     top: 0;
-    bottom: unset;
-    height: 100vh;
+    height: 1000px;
+    max-height: 90%;
     opacity: 1;
+    bottom: 0;
 
     .modalContent {
     }
@@ -243,6 +246,11 @@ html {
       .modalContent {
         padding: 40px;
       }
+    }
+
+    @media (max-width: 576px){
+      max-height: 100%;
+      max-width: 100%;
     }
 
     //@media (max-width: 576px) {
@@ -283,12 +291,14 @@ html {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  backdrop-filter: blur(25px);
+
   h2{
     font-weight: 400;
-    font-size: 96px;
-    line-height: 93px;
+    font-size: 80px;
+    line-height: 83px;
     color: #FFFFFF;
-    margin: 0 auto 160px;
+    margin: 0 auto 50px;
     width: 1400px;
     max-width: 100%;
   }
@@ -335,6 +345,8 @@ html {
     right: 160px;
     top: 140px;
     cursor: pointer;
+    width: 30px;
+    height: 30px;
   }
   @media (max-width: 1400px){
     padding: 50px 70px;
