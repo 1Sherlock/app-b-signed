@@ -142,8 +142,11 @@
     margin-bottom: 76px;
     @media (max-width: 576px){
       margin-bottom: 67px;
-      div, video{
+      div{
         height: 317px;
+      }
+      video{
+        height: auto;
       }
     }
   }

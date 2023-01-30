@@ -93,11 +93,16 @@ html {
     animation-name: anim-title;
     animation-duration: 10s;
     animation-timing-function: linear;
+    @media (max-width: 992px){
+      right: -60px;
+    }
   }
 
 
   @media (max-width: 992px){
-    display: none!important;
+    width: 100px;
+    height: 100px;
+    bottom: 80px;
   }
 
 

@@ -139,7 +139,8 @@ body {
       left: 0;
       background: rgba(255, 0, 245, 0.1);
       filter: blur(73.5px);
-
+      -ms-filter: blur(73.5px);
+      -webkit-filter: blur(73.5px);
     }
 
     .absolute-right {
@@ -150,6 +151,8 @@ body {
       right: 0;
       background: rgba(0, 113, 161, 0.35);
       filter: blur(73.5px);
+      -ms-filter: blur(73.5px);
+      -webkit-filter: blur(73.5px);
     }
 
     .parent-box {
@@ -798,6 +801,8 @@ footer {
   .section-two {
     width: 1550px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 
     .parent-box {
       display: flex;
@@ -944,6 +949,8 @@ footer {
         font-size: 48px;
         line-height: 59px;
         width: 430px;
+        text-align: center!important;
+        margin: auto;
       }
     }
   }
@@ -1568,14 +1575,13 @@ footer {
     .scroll-section-animation{
       .text-effect-sticky-element {
         .container-w3{
-          max-width: 280px;
+          max-width: 309px;
           padding: 0;
 
           .text-effect-text{
             font-size: 30px!important;
             line-height: 132.9% !important;
-            width: 280px;
-            text-align: left!important;
+            width: 309px;
           }
         }
       }

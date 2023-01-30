@@ -12,7 +12,7 @@ function FormComponent(props) {
         const message = encodeURI(`❗️ NEW APPLICATION\n-----------------------------------\n\nName: *${e.target.name.value}*\nEmail: *${e.target.email.value}*\nPhone: *${e.target.phone.value}*\nDescription: *${e.target.commit.value}*`);
 
         const token = "750388483:AAE9yeU3fKI8QpxaKoem4kjwAoBn4iKCNAo";
-        const chat_id = -879399852;
+        const chat_id = -861153427;
         const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}&parse_mode=markdown`;
 
         axios.get(url)

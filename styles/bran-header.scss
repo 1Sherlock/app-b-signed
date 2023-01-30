@@ -18,7 +18,8 @@
     }
     .brand-page-main-header-content-text{
       margin-left: 200px;
-      position: relative;
+      position: absolute;
+      bottom: 20px;
       width: 286px;
 
       p{
@@ -41,11 +42,14 @@
   }
 
   @media (max-width: 992px){
+    height: auto;
     .brand-page-main-header-content{
+      height: auto;
       .brand-page-main-header-content-img{
-        margin-bottom: 138px;
+        margin-bottom: 0;
       }
       .brand-page-main-header-content-text{
+        position: relative;
         margin: 0 auto!important;
       }
     }
