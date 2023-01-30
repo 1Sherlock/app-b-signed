@@ -5,11 +5,16 @@ import FormComponent from "../../../components/FormComponent";
 import Footer from "../../../components/Footer";
 import {randomIntFromInterval} from "../../../tools";
 import Slider from "react-slick";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 const Pepsi = () => {
     const [number, setNumber] = useState(randomIntFromInterval(0, 2));
 
     useEffect(() => {
+        AOS.init({
+            duration:2000
+        });
         document.getElementById("scroll-element").style.display = "block"
         return () => {
             document.getElementById("scroll-element").style.display = "none"
@@ -51,26 +56,26 @@ const Pepsi = () => {
             <header>
                 <Navbar/>
             </header>
-            <div className="page-title">
+            <div className="page-title" data-aos="fade-up">
                 <h3 className="font-montserrat-extra-bold">Pepsi Co - Beverage company</h3>
             </div>
 
             <div className="container">
-                <h1 className="font-neue-machina-regular">
+                <h1 className="font-neue-machina-regular" data-aos="fade-up">
                     Experience the world's
                     best drink
                 </h1>
 
                 <div className="info-content">
                     <div className="info-content-item">
-                        <h4 className="font-montserrat-bold">Authentic Brand
+                        <h4 className="font-montserrat-bold" data-aos="fade-up">Authentic Brand
                             Engagement</h4>
                     </div>
                     <div className="info-content-item">
-                        <h4 className="font-montserrat-bold">AN ORIGINAL PROJECT
+                        <h4 className="font-montserrat-bold" data-aos="fade-up">AN ORIGINAL PROJECT
                             FOR PEPSI</h4>
                     </div>
-                    <div className="info-content-item">
+                    <div className="info-content-item" data-aos="fade-up">
                         <p>
                             Pepsi is an iconic brand known around the world for its loved drinks. It was a privilege for us to work with Pepsi on a project to establish an online presence and improve brand recognition. Our team employed unique design
                             and marketing strategies to provide Pepsi with the best potential outcome in all aspects. The results were excellent, and we are pleased to have aided in the expansion of such a respectable company.
@@ -78,16 +83,16 @@ const Pepsi = () => {
                     </div>
                 </div>
 
-                <div className="video-content">
+                <div className="video-content" data-aos="fade-up">
                     <div></div>
                 </div>
 
             </div>
-            <p className="video-info-text">
+            <p className="video-info-text" data-aos="fade-up">
                 Through targeted advertising and carefully crafted messaging, we were able to increase brand awareness and online traffic for Pepsi.
             </p>
 
-            <div className="container">
+            <div className="container" data-aos="fade-up">
                 <div className="carousel-content-wrap">
                     <h5 className="carousel-text font-montserrat-bold">
                         MOBILE VIEW
@@ -118,12 +123,12 @@ const Pepsi = () => {
             </div>
             <div className="container">
                 <div className="info-text-content">
-                    <h2 className="font-montserrat-extra-bold">
+                    <h2 className="font-montserrat-extra-bold" data-aos="fade-up">
                         ARE YOU READY TO IGNITE YOUR BRAND’S FULL POTENTIAL?
                     </h2>
-                    <h3 className="font-montserrat-semi-bold">Let’s work together</h3>
+                    <h3 className="font-montserrat-semi-bold" data-aos="fade-up">Let’s work together</h3>
                 </div>
-                <h4 className="more-text">More Projects</h4>
+                <h4 className="more-text" data-aos="fade-up">More Projects</h4>
                 <div className="project-content">
                     {projects.map((item, index) => {
                         return index != number ?

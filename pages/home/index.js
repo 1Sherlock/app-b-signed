@@ -6,15 +6,20 @@ import Link from "next/link";
 import Modal from "../../components/Modal";
 import Example from "../../components/Example";
 import Layer from "../../components/Layer";
-
+import 'aos/dist/aos.css'
+import AOS from 'aos'
 function Index(props) {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
+        AOS.init({
+            duration:2000
+        });
         window.addEventListener('scroll', changeScroll);
         return () => {
             window.removeEventListener("scroll", changeScroll)
         }
+
     }, []);
 
     const changeScroll = () => {
@@ -39,8 +44,7 @@ function Index(props) {
             }
         }
 
-    }
-    console.log(props)
+    };
     return (
         <div className="home-page">
             <Header/>
@@ -71,7 +75,7 @@ function Index(props) {
             </section>
 
             <section className="section-two">
-                <div className="parent-box">
+                <div className="parent-box"  data-aos="fade-up">
                     <div className="box">
                         <div className="title font-montserrat-bold">
                             Fully Remote
@@ -95,7 +99,7 @@ function Index(props) {
                         </div>
                     </div>
                 </div>
-                <div className="parent-box second-parent-box">
+                <div className="parent-box second-parent-box" data-aos="fade-up">
                     <div className="box">
                         <div className="title title-pink font-montserrat-bold">
                             Approach
@@ -119,7 +123,7 @@ function Index(props) {
                         </div>
                     </div>
                 </div>
-                <button className={'font-montserrat-bold'}>
+                <button className={'font-montserrat-bold'} data-aos="fade-up">
                     <a href={'#js-target'}>Get Started</a>
                 </button>
             </section>
@@ -149,7 +153,7 @@ function Index(props) {
             <section className="section-four">
                 <div className="absolute-left"/>
                 <div className="absolute-right"/>
-                <div className="mobile-step">
+                <div className="mobile-step" data-aos="fade-up">
                     <div className="all-step">
                         <div className="step step-one font-montserrat-extra-bold">
                             1 Step
@@ -204,17 +208,17 @@ function Index(props) {
                         </div>
                     </div>
                 </div>
-                <div className="commit-text font-poppins-regular">
+                <div className="commit-text font-poppins-regular" data-aos="fade-up">
                     The whole operational part from our behalf is colculated to be completed in 2-3 weeks.
                 </div>
-                <button className={'font-montserrat-bold'}>
+                <button className={'font-montserrat-bold'} data-aos="fade-up">
                     <a href={'#js-target'}>Get Started</a>
                 </button>
             </section>
 
             <section className="partner-section">
-                <h1 className={'font-montserrat-extra-bold'}>Proudly working with</h1>
-                <div className="all-partner">
+                <h1 className={'font-montserrat-extra-bold'} data-aos="fade-up">Proudly working with</h1>
+                <div className="all-partner" data-aos="fade-up">
                     <div className="partner">
                         <img src="/assets/partner/pepsi.svg" alt=""/>
                     </div>
@@ -231,14 +235,14 @@ function Index(props) {
             </section>
 
             <section className="section-five">
-                <video muted autoPlay loop playsInline>
+                <video muted autoPlay loop playsInline data-aos="fade-up">
                     <source src="/assets/video/home.mp4" type="video/mp4"/>
                 </video>
-                <button className={'font-montserrat-bold'}><a href={'#js-target'}>Get Started</a></button>
+                <button className={'font-montserrat-bold'} data-aos="fade-up"><a href={'#js-target'} >Get Started</a></button>
             </section>
 
-            <section className="form-section" id="js-target">
-                <FormComponent/>
+            <section className="form-section" id="js-target" data-aos="fade-up">
+                <FormComponent />
             </section>
 
             <footer>

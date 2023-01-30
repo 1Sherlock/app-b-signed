@@ -4,12 +4,16 @@ import Footer from "../../components/Footer";
 import Link from "next/link";
 import BranHeader from "../../components/BranHeader";
 import Layer from "../../components/Layer";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 function Index(props) {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-
+        AOS.init({
+            duration:2000
+        });
         window.addEventListener('scroll', changeScroll)
         return () => {
             window.removeEventListener("scroll", changeScroll)
@@ -64,7 +68,7 @@ function Index(props) {
             {/*    </h1>*/}
             {/*</div>*/}
             <div className="section-two">
-                <div className="parent-box">
+                <div className="parent-box" data-aos="fade-up">
                     <div className="box">
                         <div className="box-left font-neue-machina-regular">01</div>
                         <div className="box-right">
@@ -93,7 +97,7 @@ function Index(props) {
                         </div>
                     </div>
                 </div>
-                <div className="parent-box second-parent-box">
+                <div className="parent-box second-parent-box" data-aos="fade-up">
                     <div className="box">
                         <div className="box-left font-neue-machina-regular box-left-third">03</div>
                         <div className="box-right">
@@ -125,17 +129,17 @@ function Index(props) {
                 </div>
             </div>
             <section className="brand-section">
-                <div className="title font-montserrat-extra-bold">
+                <div className="title font-montserrat-extra-bold" data-aos="fade-up">
                     Brands we worked with
                 </div>
-                <div className="brand">
+                <div className="brand" data-aos="fade-up">
                     <img src="/assets/partner/pepsi.svg" alt=""/>
                     <img src="/assets/partner/khan.svg" alt=""/>
                     <img src="/assets/partner/slyde.svg" alt=""/>
                     <img src="/assets/partner/icars.svg" alt=""/>
                 </div>
 
-                <div className="parent-box">
+                <div className="parent-box" data-aos="fade-up">
                     <div className="box">
                         <Link href="/projects/pepsi"><img src="/assets/home/Pepsi.png" alt=""/></Link>
                     </div>
@@ -143,7 +147,7 @@ function Index(props) {
                         <Link href="/projects/i-cars"><img src="/assets/home/Icars.png" alt=""/></Link>
                     </div>
                 </div>
-                <div className="parent-box">
+                <div className="parent-box" data-aos="fade-up">
                     <div className="box">
                         <Link href="/projects/social"><img src="/assets/home/Slyde.png" alt=""/></Link>
                     </div>

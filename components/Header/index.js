@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Slider from "react-slick";
 import Navbar from "../Navbar";
+import AOS from 'aos';
 const Header = () => {
 
     const [date, setDate] = useState("");
@@ -21,7 +22,11 @@ const Header = () => {
             const dateTemp = new Date()
             setTime(dateTemp.getHours() + ":" + (dateTemp.getMinutes() > 9 ? dateTemp.getMinutes() : "0" + dateTemp.getMinutes()))
             setDate((dateTemp.getDate() > 9 ? dateTemp.getDate() : "0" + dateTemp.getDate()) + "." + ((dateTemp.getMonth() + 1) > 9 ? (dateTemp.getMonth() + 1) : "0" + (dateTemp.getMonth() + 1)) + "." + dateTemp.getFullYear())
-        } ,1000)
+        } ,1000);
+
+        AOS.init({
+            duration : 2000
+        });
     }, [date, time])
 
 
@@ -30,10 +35,11 @@ const Header = () => {
         <div className="main-header">
             <Navbar/>
             <div className="main-header-content">
-                <div className="main-header-content-left">
-                    <h1 className="font-neue-machina-regular">You Desire</h1>
+                 <div
+                      className="main-header-content-left">
+                    <h1  className="font-neue-machina-regular">You Desire</h1>
                     <h1 className="font-neue-machina-regular">We Design</h1>
-                </div>
+                </div >
                 <video autoPlay muted loop playsInline>
                     <source src="/assets/video/shart.mp4" type="video/mp4"/>
                 </video>

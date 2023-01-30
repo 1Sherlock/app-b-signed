@@ -1,16 +1,23 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import Link from "next/link";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 function Footer(props) {
+    useEffect(()=>{
+        AOS.init({
+            duration:2000
+        });
+    },[]);
     return (
         <div className="footer-section">
-            <div className="footer-section-left-side">
-                <Link href="/home" className="brand">
+            <div className="footer-section-left-side" data-aos="fade-up">
+                <Link href="/home" className="brand" >
                     <img src="/assets/icons/logo-footer.svg" alt=""/>
                 </Link>
                 <p className="text font-poppins-regular desktop-footer-text">C 2023 All Rights reserved
                     Be Signed  LLC</p>
             </div>
-            <div className="footer-section-right-side">
+            <div className="footer-section-right-side" data-aos="fade-up">
                 <div className="menu">
                     <div className="nav">
                         <b className={'font-montserrat-extra-bold'}>Company</b>
@@ -37,7 +44,7 @@ function Footer(props) {
                     </div>
                 </div>
             </div>
-            <p className="text font-poppins-regular mobile-footer-text">C 2022 All Rights reserved
+            <p className="text font-poppins-regular mobile-footer-text" data-aos="fade-up">C 2022 All Rights reserved
                 Be Signed  LLC</p>
         </div>
     );
