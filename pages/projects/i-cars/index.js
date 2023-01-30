@@ -77,7 +77,10 @@ const ICars = () => {
                     </div>
                 </div>
                 <div className="video-content">
-                    <div></div>
+                    <video autoPlay muted loop playsInline>
+                        <source src="/assets/video/i-cars.MP4" type="video/mp4"/>
+                    </video>
+                    {/*<div></div>*/}
                 </div>
             </div>
             <p className="video-info-text">Our team utilized NodeJS and Python to create a custom website that perfectly captures the essence of icars identity and leadership in their industry. The design elements were carefully crafted to align with the brand's values and

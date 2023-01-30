@@ -120,7 +120,7 @@ function Index(props) {
                     </div>
                 </div>
                 <button className={'font-montserrat-bold'}>
-                    <Link href={'#js-target'}>Get Started</Link>
+                    <a href={'#js-target'}>Get Started</a>
                 </button>
             </section>
 
@@ -208,7 +208,7 @@ function Index(props) {
                     The whole operational part from our behalf is colculated to be completed in 2-3 weeks.
                 </div>
                 <button className={'font-montserrat-bold'}>
-                    <Link href={'#js-target'}>Get Started</Link>
+                    <a href={'#js-target'}>Get Started</a>
                 </button>
             </section>
 
@@ -234,7 +234,7 @@ function Index(props) {
                 <video muted autoPlay loop playsInline>
                     <source src="/assets/video/home.mp4" type="video/mp4"/>
                 </video>
-                <button className={'font-montserrat-bold'}><Link href={'#js-target'}>Get Started</Link></button>
+                <button className={'font-montserrat-bold'}><a href={'#js-target'}>Get Started</a></button>
             </section>
 
             <section className="form-section" id="js-target">

@@ -1,5 +1,5 @@
 .projects-page{
-  background-color: #161316;
+  background-color: #000000;
   header{
     height: 100vh;
     background-image: url("/assets/images/icars.png");
@@ -131,14 +131,18 @@
     }
   }
   .video-content{
-    div{
+    div, video{
       background-color: #1E1E1E;
       height: 740px;
+      width: 100%;
+    }
+    video{
+      height: auto;
     }
     margin-bottom: 76px;
     @media (max-width: 576px){
       margin-bottom: 67px;
-      div{
+      div, video{
         height: 317px;
       }
     }
