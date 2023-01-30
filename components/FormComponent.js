@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import axios from "axios";
-
+import AOS from "aos";
+import 'aos/dist/aos.css';
 function FormComponent(props) {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -22,11 +23,17 @@ function FormComponent(props) {
                 e.target.reset();
             })
     }
+
+    useEffect(()=>{
+        AOS.init({
+            duration:2000
+        });
+    },[]);
     return (
         <>
             <div className="form-component">
-                <h1 className={'font-montserrat-extra-bold'}>Contact us</h1>
-                <div className="form">
+                <h1 className={'font-montserrat-extra-bold'} data-aos="fade-up">Contact us</h1>
+                <div className="form" data-aos="fade-up" data-aos-delay="300">
                     <p className={'font-poppins-regular'}>
                         Expect efficient and reliable service as we complete your project in just 2-3 weeks. Trust us to
                         operate seamlessly and deliver exceptional results.

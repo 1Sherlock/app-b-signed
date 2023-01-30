@@ -4,12 +4,16 @@ import Footer from "../../components/Footer";
 import AppHeader from "../../components/AppHeader";
 import Link from "next/link";
 import Layer from "../../components/Layer";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 function Index(props) {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-
+        AOS.init({
+            duration:2000
+        });
         window.addEventListener('scroll', changeScroll)
         return () => {
             window.removeEventListener("scroll", changeScroll)
@@ -63,7 +67,7 @@ function Index(props) {
             {/*        to come up with the best solution</h1>*/}
             {/*</div>*/}
             <div className="section-one">
-                <div className="parent-box">
+                <div className="parent-box"  data-aos="fade-up">
                     <div className="box">
                         <div className="title font-neue-machina-bold">
                             01
@@ -103,7 +107,7 @@ function Index(props) {
                         </div>
                     </div>
                 </div>
-                <button className={'font-montserrat-bold'}>
+                <button className={'font-montserrat-bold'}  data-aos="fade-up">
                     <Link href={'#js-target'}>Place an order</Link>
                 </button>
             </div>
@@ -128,18 +132,18 @@ function Index(props) {
             {/*        We guarantee technical quality*/}
             {/*    </h1>*/}
             {/*</div>*/}
-            <div className="section-three">
-                <img className="mobile-iphone-img" src="/assets/home/iphone.png" alt=""/>
+            <div className="section-three"  data-aos="fade-up">
+                <img className="mobile-iphone-img" src="/assets/home/iphone.png" alt=""  data-aos="fade-up"/>
                 <div className="box">
-                    <div className="title font-montserrat-bold">
+                    <div className="title font-montserrat-bold"  data-aos="fade-up">
                         Slyde App
                     </div>
-                    <div className="text-left font-poppins-regular">
+                    <div className="text-left font-poppins-regular"  data-aos="fade-up">
                         Slyde is a revolutionary startup that keeps you in the know about all the hottest events
                         happening in cities across the nation
 
                     </div>
-                    <div className="text-right font-poppins-regular">
+                    <div className="text-right font-poppins-regular"  data-aos="fade-up">
                         For this project, our development process was expertly crafted to deliver exceptional results.
                         We ensured the technical aspects were beautifully aligned with the proposed design. The end
                         result was a highly optimized and successful site.

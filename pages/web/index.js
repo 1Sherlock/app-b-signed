@@ -4,12 +4,16 @@ import Footer from "../../components/Footer";
 import Slider from "react-slick";
 import WebHeader from "../../components/WebHeader";
 import Layer from "../../components/Layer";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Index(props) {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-
+        AOS.init({
+            duration:2000
+        });
         window.addEventListener('scroll', changeScroll)
         return () => {
             window.removeEventListener("scroll", changeScroll)
@@ -73,7 +77,7 @@ function Index(props) {
             {/*        your choice</h1>*/}
             {/*</div>*/}
             <div className="section-two">
-                <div className="parent-box">
+                <div className="parent-box" data-aos="fade-up" data-aos-delay="300">
                     <div className="box">
                         <img src="/assets/web/ideas.png" alt=""/>
                         <div className="title font-montserrat-bold">
@@ -109,7 +113,7 @@ function Index(props) {
                         </div>
                     </div>
                 </div>
-                <div className="parent-box">
+                <div className="parent-box" data-aos="fade-up" data-aos-delay="300">
                     <div className="box">
                         <img src="/assets/web/shield.png" alt=""/>
                         <div className="title font-montserrat-bold">
@@ -171,10 +175,10 @@ function Index(props) {
             {/*    </h1>*/}
             {/*</div>*/}
             <div className="carousel-section">
-                <div className="carousel-item">
+                <div className="carousel-item" data-aos="fade-up">
                     <img src="/assets/carousel/carousel-img.png" alt=""/>
                 </div>
-                <div className="carousel-text">
+                <div className="carousel-text" data-aos="fade-up">
                     <Slider {...settings}>
                         <div className="header-carousel-item">
                             <p className="font-poppins-regular">
@@ -207,10 +211,10 @@ function Index(props) {
             <div className="section-four">
                 <div className="parent-box">
                     <div className="box">
-                        <img src="/assets/home/img1.png" alt=""/>
-                        <img src="/assets/home/img3.png" alt=""/>
+                        <img src="/assets/home/img1.png" alt="" data-aos="fade-up" data-aos-delay="400"/>
+                        <img src="/assets/home/img3.png" alt="" data-aos="fade-up" data-aos-delay="400"/>
                     </div>
-                    <div className="box">
+                    <div className="box" data-aos="fade-up" data-aos-delay="400">
                         <div className="title font-neue-machina-bold">
                             See what
                             we capable of
