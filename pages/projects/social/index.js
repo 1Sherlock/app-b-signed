@@ -15,7 +15,9 @@ const Social = () => {
         AOS.init({
             duration:2000
         });
-        document.getElementById("scroll-element").style.display = "block"
+        if (document.getElementById("scroll-element")){
+            document.getElementById("scroll-element").style.display = "block";
+        }
         return () => {
             document.getElementById("scroll-element").style.display = "none"
         }
