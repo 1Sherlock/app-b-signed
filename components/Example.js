@@ -50,8 +50,28 @@ export default class Example extends Component {
     // };
 
     render() {
+        function handleTouchStart(e) {
+            this.setState({touchStart: e.targetTouches[0].clientY});
+        }
+
+        function handleTouchMove(e) {
+            this.setState({touchEnd: e.targetTouches[0].clientY});
+        }
+
+        function handleTouchEnd() {
+            const nimadir = this;
+            if (this.touchStart - this.touchEnd > 150) {
+                nimadir.moveSlide(1)
+            }
+
+            if (this.touchStart - this.touchEnd < -150) {
+                nimadir.moveSlide(-1);
+            }
+        }
+
         return (
             <div
+                onTouchStart={() => console.log("started")}
                 style={{
                     display: "flex",
                     flexDirection: "column",

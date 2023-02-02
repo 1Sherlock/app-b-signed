@@ -347,8 +347,8 @@ html {
   }
   .icon-x{
     position: absolute;
-    right: 160px;
-    top: 140px;
+    right: 80px;
+    top: 70px;
     cursor: pointer;
     width: 30px;
     height: 30px;
@@ -404,6 +404,7 @@ html {
     }
     .layer-img{
       width: 300px;
+      user-select: none;
     }
     .project-layer-content-right{
       display: flex;

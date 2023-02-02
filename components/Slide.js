@@ -33,7 +33,9 @@ function Slide({
                    moveSlide,
                    delta,
                    down,
-                   up
+                   handleTouchStart,
+                   handleTouchMove,
+                   handleTouchEnd
                }) {
     const offsetFromMiddle = index - offsetRadius;
     const totalPresentables = 2 * offsetRadius + 1;

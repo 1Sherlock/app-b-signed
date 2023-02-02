@@ -86,7 +86,10 @@ const Pepsi = () => {
                 </div>
 
                 <div className="video-content" data-aos="fade-up">
-                    <div></div>
+                    <video autoPlay muted loop playsInline>
+                        <source src="/assets/video/pepsi.mp4" type="video/mp4"/>
+                    </video>
+                    {/*<div></div>*/}
                 </div>
 
             </div>

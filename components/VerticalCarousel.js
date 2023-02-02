@@ -39,7 +39,9 @@ class VerticalCarousel extends React.Component {
         index: 0,
         goToSlide: null,
         prevPropsGoToSlide: 0,
-        newSlide: false
+        newSlide: false,
+        touchStart: 0,
+        touchEnd: 0
     };
 
     componentDidMount = () => {
@@ -116,6 +118,7 @@ class VerticalCarousel extends React.Component {
         return presentableSlides;
     }
 
+
     render() {
         const { offsetRadius, showNavigation } = this.props;
 
@@ -130,20 +133,42 @@ class VerticalCarousel extends React.Component {
                 </NavigationButtons>
             );
         }
+
+        function handleTouchStart(e) {
+            this.setState({touchStart: e.targetTouches[0].clientY});
+        }
+
+        function handleTouchMove(e) {
+            this.setState({touchEnd: e.targetTouches[0].clientY});
+        }
+
+        function handleTouchEnd() {
+            const nimadir = this;
+            if (this.touchStart - this.touchEnd > 150) {
+                nimadir.moveSlide(1)
+            }
+
+            if (this.touchStart - this.touchEnd < -150) {
+                nimadir.moveSlide(-1);
+            }
+        }
         return (
             <React.Fragment>
                 <Wrapper>
-                    {this.getPresentableSlides().map((slide, presentableIndex) => (
-                        <Slide
-                            key={slide.key}
-                            content={slide.content}
-                            moveSlide={this.moveSlide}
-                            offsetRadius={this.clampOffsetRadius(offsetRadius)}
-                            index={presentableIndex}
-                            selected={this.props.selected}
-                            setSelected={this.props.setSelected}
-                        />
-                    ))}
+                        {this.getPresentableSlides().map((slide, presentableIndex) => (
+                            <Slide
+                                key={slide.key}
+                                content={slide.content}
+                                moveSlide={this.moveSlide}
+                                offsetRadius={this.clampOffsetRadius(offsetRadius)}
+                                index={presentableIndex}
+                                selected={this.props.selected}
+                                setSelected={this.props.setSelected}
+                                handleTouchStart={handleTouchStart}
+                                handleTouchMove={handleTouchMove}
+                                handleTouchEnd={handleTouchEnd}
+                            />
+                        ))}
                 </Wrapper>
                 {navigationButtons}
             </React.Fragment>

@@ -84,7 +84,7 @@ const ICars = () => {
                 </div>
                 <div className="video-content" data-aos="fade-up">
                     <video autoPlay muted loop playsInline>
-                        <source src="/assets/video/i-cars.MP4" type="video/mp4"/>
+                        <source src="/assets/video/i-cars.mp4" type="video/mp4"/>
                     </video>
                     {/*<div></div>*/}
                 </div>
