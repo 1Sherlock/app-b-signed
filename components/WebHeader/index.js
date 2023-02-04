@@ -2,12 +2,6 @@ import React, {useEffect} from 'react';
 import Navbar from "../Navbar";
 
 const WebHeader = () => {
-    useEffect(() => {
-        document.getElementById("tap-to").style.display = "block"
-        return () => {
-            document.getElementById("tap-to").style.display = "none"
-        }
-    }, [])
     return (
         <div className="web-page-main-header">
             <Navbar/>
