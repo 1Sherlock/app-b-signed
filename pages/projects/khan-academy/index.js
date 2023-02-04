@@ -14,12 +14,6 @@ const Khan = () => {
         AOS.init({
             duration:2000
         });
-        if (document.getElementById("scroll-element")){
-            document.getElementById("scroll-element").style.display = "block";
-        }
-        return () => {
-            document.getElementById("scroll-element").style.display = "none"
-        }
     }, [])
 
     const settings = {
@@ -53,7 +47,7 @@ const Khan = () => {
     ]
 
     return (
-        <div className="projects-page khan" data-scroll-section>
+        <div className="projects-page khan">
             <header>
                 <Navbar/>
             </header>
@@ -146,7 +140,9 @@ const Khan = () => {
             <footer>
                 <Footer/>
             </footer>
-
+            <div className="scroll-down-item" id="scroll-element">
+                <img src="/assets/images/scroll-down.png" alt="scroll"/>
+            </div>
         </div>
     );
 };
