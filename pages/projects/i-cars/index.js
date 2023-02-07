@@ -99,18 +99,24 @@ const ICars = () => {
                             <div className="car-content-item">
                                 <img src="/assets/images/car2.png" alt="car1"/>
                             </div>
-                            {/*<div className="car-content-item">*/}
-                            {/*    <img src="/assets/images/car3.png" alt="car1"/>*/}
-                            {/*</div>*/}
+                            <div className="car-content-item">
+                                <img src="/assets/images/car4.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/car5.png" alt="car1"/>
+                            </div>
                             <div className="car-content-item">
                                 <img src="/assets/images/car1.png" alt="car1"/>
                             </div>
                             <div className="car-content-item">
                                 <img src="/assets/images/car2.png" alt="car1"/>
                             </div>
-                            {/*<div className="car-content-item">*/}
-                            {/*    <img src="/assets/images/car3.png" alt="car1"/>*/}
-                            {/*</div>*/}
+                            <div className="car-content-item">
+                                <img src="/assets/images/car4.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/car5.png" alt="car1"/>
+                            </div>
                         </Slider>
                     </div>
                 </div>

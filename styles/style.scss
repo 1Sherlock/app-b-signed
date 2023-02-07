@@ -417,6 +417,33 @@ footer {
   .footer-section {
     display: flex;
     justify-content: space-between;
+    .footer-section-left-side{
+      @media (min-width: 1200px){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p{
+          margin-bottom: 0;
+        }
+      }
+    }
+    .footer-section-right-side{
+      @media (min-width: 1200px){
+        .menu{
+          .nav{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            ul{
+              margin-bottom: 0;
+              li:last-child{
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .text {
@@ -1383,7 +1410,6 @@ footer {
       display: flex;
       flex-direction: column;
       padding: 0 50px;
-
     }
 
     .brand {

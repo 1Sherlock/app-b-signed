@@ -80,7 +80,9 @@ const Social = () => {
                 </div>
 
                 <div className="video-content" data-aos="fade-up">
-                    <div></div>
+                    <video autoPlay muted loop playsInline>
+                        <source src="/assets/video/slyde.mp4" type="video/mp4"/>
+                    </video>
                 </div>
 
             </div>
@@ -102,18 +104,48 @@ const Social = () => {
                             <div className="car-content-item">
                                 <img src="/assets/images/social-car2.png" alt="car1"/>
                             </div>
-                            {/*<div className="car-content-item">*/}
-                            {/*    <img src="/assets/images/car3.png" alt="car1"/>*/}
-                            {/*</div>*/}
+                            <div className="car-content-item">
+                                <img src="/assets/images/social-car4.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/social-car5.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/social-car6.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/social-car7.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/social-car8.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/social-car9.png" alt="car1"/>
+                            </div>
                             <div className="car-content-item">
                                 <img src="/assets/images/social-car1.png" alt="car1"/>
                             </div>
                             <div className="car-content-item">
                                 <img src="/assets/images/social-car2.png" alt="car1"/>
                             </div>
-                            {/*<div className="car-content-item">*/}
-                            {/*    <img src="/assets/images/car3.png" alt="car1"/>*/}
-                            {/*</div>*/}
+                            <div className="car-content-item">
+                                <img src="/assets/images/social-car4.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/social-car5.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/social-car6.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/social-car7.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/social-car8.png" alt="car1"/>
+                            </div>
+                            <div className="car-content-item">
+                                <img src="/assets/images/social-car9.png" alt="car1"/>
+                            </div>
                         </Slider>
                     </div>
                 </div>

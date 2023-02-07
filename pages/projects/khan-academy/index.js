@@ -80,7 +80,9 @@ const Khan = () => {
                 </div>
 
                 <div className="video-content" data-aos="fade-up">
-                    <div></div>
+                    <video autoPlay muted loop playsInline>
+                        <source src="/assets/video/khan.mp4" type="video/mp4"/>
+                    </video>
                 </div>
 
             </div>
